@@ -1,0 +1,1784 @@
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+/*** Spinner Start ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+/*** Spinner End ***/
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+
+/*** Button Start ***/
+.btn {
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-sm-square {
+    width: 34px;
+    height: 34px;
+}
+
+.btn-md-square {
+    width: 40px;
+    height: 40px;
+}
+
+.btn-lg-square {
+    width: 46px;
+    height: 46px;
+}
+
+.btn-xl-square {
+    width: 56px;
+    height: 56px;
+}
+
+.col-lg-9 a{
+    color: white;
+    background-color: #a95e34;
+    border: #a95e34;
+}
+.col-lg-9 a:hover{
+    color: white;
+    background-color: #a95e34;
+    border: #a95e34;
+    transition: ease-in;
+}
+.btn-primary{
+    background-color: #a95e34;
+    color: white;
+    border: #a95e34;
+}
+
+
+
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square,
+.btn-xl-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+.fixed-buttons-container {
+    position: fixed;
+}
+
+
+.btn.btn-light {
+    color: var(--bs-primary);
+    border: none;
+    }
+
+.btn.btn-light:hover {
+    color: var(--bs-white);
+    background: var(--bs-primary);
+}
+#navbar-default ul li a {
+    font-weight: bold;
+  }
+
+/* Button Styles */
+.buttonClass {
+    background-color: #e3e3e3;
+    height: 6vh;
+    border: none;
+    margin-left: 15px;
+    margin-right: 10px;
+    color:#a95e34;
+    margin-bottom: 10vh;
+}
+
+.buttonClass:hover {
+    background-color: var(--bs-primary);
+    transition: background-color 0.5s ease-in-out;
+    color: white;
+}
+
+.buttonClass1 {
+    background-color: transparent;
+    height: 6vh;
+    border: none;
+    margin-left: 15px;
+    margin-right: 10px;
+    color: #a95e34;
+    background-color: #e3e3e3;
+}
+
+.buttonClass1:hover {
+    background-color: var(--bs-primary);
+    transition: background-color 0.5s ease-in-out;
+    color: white;
+}
+
+/*** Navbar End ***/
+
+
+/*** Carousel Hero Header Start ***/
+.hero-section {
+    background-image: url(../img/backImage1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+
+
+.hero-shape-1 {
+    background-color: var(--bs-primary);
+    width: 150px;
+    height: 50%;
+    position: absolute;
+    left: 54%;
+    top: 0;
+    transform: translateY(-50%) skew(-26deg, 0deg);
+    position: relative;
+}
+
+.hero-shape-1:before {
+    background-color: var(--bs-dark);
+    content: "";
+    width: 50%;
+    height: 80%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.hero-shape-2 {
+    background-color: var(--bs-dark);
+    width: 150px;
+    height: 50%;
+    position: absolute;
+    right: -43%;
+    bottom: 0;
+    transform: translateY(50%) skew(-25deg, 0deg);
+    position: relative;
+    z-index: 1;
+}
+
+.hero-shape-2::after {
+    background-color: var(--bs-primary);
+    content: "";
+    width: 75px;
+    height: 80%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/*** Carousel Hero Header Start ***/
+/* Carousel navigation buttons */
+
+
+.header-carousel .header-carousel-item {
+    height: 700px;
+    position: relative; /* Make sure the buttons are positioned relative to this container */
+}
+
+/* Position the buttons within the carousel items */
+.carousel-buttons {
+    position: absolute;
+    bottom: 130px;  /* Adjust the space from the bottom of the carousel item */
+    left: 19.5%;
+    transform: translateX(-50%);  /* Center buttons horizontally */
+    z-index: 1000;  /* Ensure buttons are above other content */
+
+}
+
+
+/* Styling for the carousel */
+.header-carousel .carousel-caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    z-index:99;
+}
+
+.header-carousel-item .text-sm-center{
+    margin-left: 4px;
+}
+.header-carousel .owl-nav .owl-prev,
+.header-carousel .owl-nav .owl-next {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: var(--bs-white);
+    color: var(--bs-primary);
+    font-size: 26px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.header-carousel .owl-nav .owl-prev {
+    bottom: 30px;
+    left: 0;
+    margin-left: 18vh;
+}
+
+.header-carousel .owl-nav .owl-next {
+    bottom: 30px;
+    right: 0;
+    margin-right: 18vh;
+}
+
+.header-carousel .owl-nav .owl-prev:hover,
+.header-carousel .owl-nav .owl-next:hover {
+    box-shadow: inset 0 0 65px 0 var(--bs-primary);
+}
+
+
+/* Mobile responsive adjustments for buttons */
+@media (max-width: 768px) {
+    .carousel-buttons {
+        display: flex;
+        flex-direction: column;
+        left: 50%; /* Keep buttons centered */
+        gap: 8px; /* Space buttons closer together */
+        margin-bottom: 100px; /* Keep enough space at the bottom */
+    }
+
+    .header-carousel .display-2 {
+        font-size: 2.5rem; /* Smaller font size for headings on mobile */
+        max-width: 600px;
+        margin-bottom: 5vh;
+    }
+
+    .header-carousel .fs-5 {
+        font-size: 1rem; /* Smaller font size for text */
+    }
+
+    .header-carousel .carousel-caption {
+        background: rgba(0, 0, 0, 0.3); /* Slightly darker overlay */
+    }
+
+    .header-carousel .carousel-item {
+        padding-bottom: 30px; /* Ensure there’s space at the bottom for the buttons */
+    }
+}
+
+
+/* Large mobile or tablet adjustments (portrait mode) */
+@media (max-width: 576px) {
+    .carousel-buttons {
+        display: flex;
+        flex-direction: column; 
+        position: absolute;
+        bottom: 0;
+    }
+
+    .header-carousel .display-2 {
+        font-size: 2rem; /* Smaller font size */
+        max-width: 500px;
+        margin-bottom: 4vh;
+    }
+
+    .header-carousel .fs-5 {
+        font-size: 0.9rem; /* Smaller text size */
+    }
+
+    .header-carousel .hero-bg-half-2 {
+        background-size: cover; /* Ensure background covers well on smaller screens */
+    }
+
+    .header-carousel .carousel-item {
+        padding-bottom: 40px; /* Adjust for proper spacing in small screens */
+    }
+}
+
+/* For very small mobile screens (portrait mode) */
+@media (max-width: 360px) {
+    .carousel-buttons {
+        bottom: 10px; /* Reduce bottom margin for very small screens */
+        gap: 3px; /* Even less space between buttons */
+    }
+
+    .header-carousel .display-2 {
+        font-size: 1.5rem; /* Very small font size */
+        max-width: 500px;
+        margin-bottom: 3vh;
+    }
+
+    .header-carousel .fs-5 {
+        font-size: 0.85rem; /* Even smaller font size */
+    }
+
+    .header-carousel .carousel-item {
+        padding-bottom: 50px; /* Ensure the bottom padding is sufficient for the buttons */
+    }
+}
+
+
+/*** Carousel Hero Header End ***/
+.carousel-buttons .btn {
+    padding: 12px 25px; /* Increase padding to make buttons wider */
+    font-size: 1.1rem; /* Adjust font size to ensure it's readable */
+    min-width: 180px; /* Set a minimum width for buttons */
+}
+
+.header-carousel .display-2 {
+    font-size: 2.5rem; /* Smaller font size for headings on mobile */
+    max-width: 600px;
+    margin-bottom: 5vh;
+}
+
+.header-carousel .fs-5 {
+    font-size: 1rem; /* Smaller font size for text */
+}
+
+.header-carousel .carousel-caption {
+    background: rgba(0, 0, 0, 0.3); /* Slightly darker overlay */
+}
+
+.header-carousel .carousel-item {
+    padding-bottom: 30px; /* Ensure there’s space at the bottom for the buttons */
+}
+
+/* Large mobile or tablet adjustments (portrait mode) */
+@media (max-width: 576px) {
+.carousel-buttons {
+    bottom: 15px; /* Reduce bottom margin even more */
+    gap: 5px; /* Even less space between buttons */
+}
+
+.header-carousel .display-2 {
+    font-size: 2rem; /* Smaller font size */
+    max-width: 500px;
+    margin-bottom: 4vh;
+}
+
+.header-carousel .fs-5 {
+    font-size: 0.9rem; /* Smaller text size */
+}
+
+.header-carousel .hero-bg-half-2 {
+    background-size: cover; /* Ensure background covers well on smaller screens */
+}
+
+.header-carousel .carousel-item {
+    padding-bottom: 40px; /* Adjust for proper spacing in small screens */
+}
+}
+
+/* For very small mobile screens (portrait mode) */
+@media (max-width: 360px) {
+.carousel-buttons {
+    bottom: 10px; /* Reduce bottom margin for very small screens */
+    gap: 3px; /* Even less space between buttons */
+}
+
+.header-carousel .display-2 {
+    font-size: 1.5rem; /* Very small font size */
+    max-width: 400px;
+    margin-bottom: 3vh;
+}
+
+.header-carousel .fs-5 {
+    font-size: 0.85rem; /* Even smaller font size */
+}
+
+.header-carousel .carousel-item {
+    padding-bottom: 50px; /* Ensure the bottom padding is sufficient for the buttons */
+}
+}
+
+
+/*** Carousel Hero Header End ***/
+.header-carousel .hero-bg-half-2 {
+
+background-size: cover; /* Ensure background covers well on smaller screens */
+}
+
+.header-carousel .carousel-item {
+    padding-bottom: 40px; /* Adjust for proper spacing in small screens */
+}
+
+
+/* For very small mobile screens (portrait mode) */
+@media (max-width: 360px) {
+.carousel-buttons {
+    bottom: 10px; /* Reduce bottom margin for very small screens */
+    gap: 3px; /* Even less space between buttons */
+}
+
+.header-carousel .display-2 {
+    font-size: 1.5rem; /* Very small font size */
+    max-width: 400px;
+    margin-bottom: 3vh;
+}
+
+.header-carousel .fs-5 {
+    font-size: 0.85rem; /* Even smaller font size */
+}
+
+.header-carousel .carousel-item {
+    padding-bottom: 50px; /* Ensure the bottom padding is sufficient for the buttons */
+}
+}
+
+
+/*** Carousel Hero Header End ***/
+
+/*** Carousel Hero Header End ***/
+
+
+/*** Single Page Hero Header Start ***/
+.bg-breadcrumb {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.187), rgba(0, 0, 0, 0.206)), url(../img/back1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 0 60px 0;
+    transition: 5s;
+}
+
+.bg-breadcrumb .breadcrumb {
+    position: relative;
+}
+
+.bg-breadcrumb .breadcrumb .breadcrumb-item a {
+    color: var(--bs-white);
+}
+
+/*** Single Page Hero Header End ***/
+
+/* New Banner Start */
+.newBanner {
+    height: 90vh;
+    object-fit: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+
+}
+
+.newBanner h2 {
+    color: white;
+    position: absolute;
+    left: 100px;
+    margin-top: 12vh;
+    width: 80vh;
+    font-weight: 900;
+    font-size: 3rem;
+    text-align: end;
+
+}
+
+.bannerBtn {
+    position: absolute;
+    right: 15vh;
+    margin-top: 60vh;
+    
+
+}
+
+@media (max-width: 867px) {
+    .newBanner {
+        background-image: url('../img/backMobile.png');
+        height: 600px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .newBanner h2 {
+        color: white;
+        font-size: 24px;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        margin-top: 38vh;
+        padding-top: 5vh;
+        padding-bottom: 20vh;
+        text-align: center;
+        padding-left: 1vh;
+        background-color: #0e121d;
+    }
+
+    .bannerBtn {
+        margin-top: 58vh;
+        left: 0;
+        margin-left: 33vh;
+
+    }
+
+    .aboutbuttn {
+        text-align: center;
+    }
+}
+
+/*** Banner Start ***/
+.banner {
+    position: relative;
+    overflow: hidden;
+    background-color: #0e121d;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 9;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.banner .container {
+    position: relative;
+    z-index: 99;
+}
+
+/* Media query for 15-inch display screen (1366px x 768px) */
+@media only screen and (min-width: 1500px) {
+    .banner {
+        width: 100%;
+        padding-right: 36vh;
+    }
+
+}
+
+/* Media Query for mobile view */
+@media (max-width: 768px) {
+    .banner {
+        background-color: #0e121d;
+        width: 100%;
+
+    }
+
+}
+
+/* Add this media query to make the banner responsive */
+@media only screen and (max-width: 768px) {
+
+    .hidden {
+        display: block;
+        margin-left: 50vh;
+    }
+
+
+
+    .banner h1 {
+        font-size: 24px;
+        /* Reduce the font size of the heading */
+        margin-bottom: 10px;
+        /* Add some margin bottom to the heading */
+        margin: 0;
+
+    }
+
+
+}
+
+
+
+.banner .banner-design-1 {
+    position: absolute;
+    width: 30px;
+    height: 500px;
+    top: -165px;
+    left: 0;
+    background: var(--bs-dark);
+    transform: rotate(45deg);
+    z-index: 2;
+}
+
+.banner .banner-design-2 {
+    position: absolute;
+    width: 30px;
+    height: 500px;
+    bottom: -165px;
+    right: 0;
+    background: var(--bs-dark);
+    transform: rotate(45deg);
+    z-index: 2;
+}
+
+
+
+/*** Banner End ***/
+
+/*** Service Start ***/
+/* Base style for nav items */
+.service .nav .nav-item {
+    width: 75%;
+    border: 1px solid var(--bs-primary);
+    background: var(--bs-light);
+}
+
+/* Default link style (no active state initially) */
+.service .nav .nav-item a {
+    display: flex;
+    justify-content: center;
+    background: var(--bs-primary);  /* Background change on hover */
+    color: var(--bs-white);         /* Text color change on hover */
+        transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+
+/* For text inside the link */
+.service .nav-item a span {
+    color: var(--bs-white); /* Default text color */
+}
+
+/* Hover effect for text inside the link */
+
+
+/* Add a click effect with JavaScript: when clicked, the background color changes, but no active class on page refresh */
+
+/* Optionally, you can add JavaScript to manage click event and apply styles dynamically */
+
+
+
+.service-carousel .owl-nav .owl-prev,
+.service-carousel .owl-nav .owl-next {
+    position: absolute;
+    padding: 10px 25px;
+    border: 1px solid var(--bs-primary);
+    color:white;
+    background: #a95e34;
+    transition: 0.5s;
+    font-size: large;
+    font: bold;
+}
+
+.service-carousel .owl-nav .owl-prev:hover,
+.service-carousel .owl-nav .owl-next:hover {
+    color:white;
+    background: #a95e34;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@media (min-width: 992px) {
+    .service-carousel .owl-nav .owl-prev {
+        top: 0;
+        left: -115px;
+    }
+
+    .service-carousel .owl-nav .owl-next {
+        bottom: 0;
+        left: -115px;
+    }
+}
+
+@media (max-width: 991px) {
+    .owl-stage-outer {
+        margin-bottom: 70px;
+    }
+
+    .service-carousel .owl-nav .owl-prev {
+        bottom: -70px;
+        left: 0;
+    }
+
+    .service-carousel .owl-nav .owl-next {
+        bottom: -70px;
+        right: 0;
+    }
+
+    .service .nav {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+/*** Service End ***/
+
+/*** Projects Start ***/
+.projects .nav-item {
+    box-shadow: 0 0 30px rgba(0, 0, 0, .09);
+}
+
+.projects-item .projects-content {
+    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+}
+
+.projects .nav-item a.active {
+    background: var(--bs-primary);
+}
+
+.projects .nav-item a span {
+    color: var(--bs-dark);
+}
+
+.projects .nav-item a.active span {
+    color: var(--bs-white);
+}
+
+.projects .nav-item a.active .projects-icon {
+    background: white !important;
+}
+
+.projects .nav-item a.active .projects-icon span {
+    color: var(--bs-dark);
+}
+
+/*** Projects End ***/
+
+
+/*** Blog Start ***/
+.blog .blog-item {
+    height: 100%;
+    background: var(--bs-light);
+}
+
+.blog .blog-item .blog-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.blog .blog-item .blog-img::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    background: rgba(246, 138, 10, .3);
+    transition: 0.5s;
+}
+
+.blog .blog-item:hover .blog-img::after {
+    width: 100%;
+    height: 100%;
+}
+
+.blog .blog-item .blog-img img {
+    transition: 0.5s;
+}
+
+.blog .blog-item:hover .blog-img img {
+    transform: scale(1.2);
+}
+
+.blog .blog-item .blog-heading {
+    position: relative;
+    background: var(--bs-white);
+}
+
+.blog .blog-item .blog-heading a.h4 {
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.blog .blog-item .blog-heading::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.blog .blog-item:hover .blog-heading::after {
+    width: 100%;
+    background: var(--bs-primary);
+}
+
+.blog .blog-item:hover .blog-heading a.h4 {
+    color: var(--bs-white);
+}
+
+.blog .blog-item:hover .blog-heading a.h4:hover {
+    color: var(--bs-dark);
+}
+
+/*** Blog End ***/
+
+/*** Team Start ***/
+.team .team-item .team-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.team .team-item .team-img img {
+    transition: 0.5s;
+}
+
+.team .team-item:hover .team-img img {
+    transform: scale(1.1);
+}
+
+.team .team-item .team-img .team-icon {
+    position: absolute;
+    bottom: 20px;
+    right: -100%;
+    z-index: 9;
+    transition: 0.5s;
+}
+
+.team .team-item:hover .team-img .team-icon {
+    right: 25px;
+}
+
+.team .team-item .team-img::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background: rgba(246, 138, 10, .2);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.team .team-item:hover .team-img::after {
+    height: 100%;
+}
+
+.team .team-item .team-content {
+    transition: 0.5s;
+}
+
+.team .team-item:hover .team-content {
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+}
+
+/* Pagination bullets styling */
+.slider-wrapper .swiper-pagination-bullet {
+    background: #A36140;
+    height: 13px;  /* Fixed height */
+    width: 13px;   /* Fixed width */
+    opacity: 0.5;
+    border-radius: 50%; /* Ensure circular bullets */
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
+  }
+
+  /* Active pagination bullet */
+.slider-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;               /* Active bullet becomes fully opaque */
+    transform: scale(1.5);     /* Increase the size of the active bullet */
+    transition: transform 0.3s ease, opacity 0.3s ease;  /* Smooth transition for size and opacity */
+}
+
+
+  /* Navigation arrows styles */
+  .slider-wrapper .swiper-slide-button {
+    color: #A36140;
+    margin-top: -55px; /* Adjust positioning */
+    transition: 0.2s ease; /* Smooth transition for color change */
+  }
+
+  /* Hover effect for navigation arrows */
+  .slider-wrapper .swiper-slide-button:hover {
+    color: #A36140;
+  }
+
+  /* Optional: Ensure that pagination and navigation arrows are aligned properly */
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px; /* Fixed size for navigation arrows */
+    height: 30px; /* Fixed size for navigation arrows */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7; /* Default opacity */
+    transition: opacity 0.2s ease; /* Smooth transition */
+  }
+
+  /* Hover effect for navigation arrows */
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    opacity: 1;
+  }
+
+/*** Team End ***/
+
+/*** FAQs Start ***/
+.faq-section .accordion .accordion-item {
+    margin-bottom: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+    border: none;
+}
+
+.faq-section .accordion .accordion-item .accordion-header .accordion-button {
+    color: #A36140;
+    background: white;
+    font-size: 18px;
+    
+    
+}
+
+.faq-section .accordion .accordion-item .accordion-header .accordion-button.collapsed {
+    
+    color:white;
+    background: #A36140;
+    
+}
+
+.accordion-button::after {
+    transform: scale(1.5);
+    font: bold;
+}
+
+/*** FAQs End ***/
+
+/*** Testimonial Start ***/
+.testimonial-carousel .owl-stage-outer {
+    margin-right: -1px;
+}
+
+.testimonial .testimonial-item {
+    position: relative;
+    margin-top: 35px;
+}
+
+.testimonial .testimonial-item .customer-text {
+    border: 1px solid var(--bs-primary);
+    border-top: none;
+    height: 300px;
+}
+
+.testimonial .testimonial-item .testimonial-quote {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: 25px;
+    transform: translateY(-50%);
+    color: var(--bs-dark);
+    background: var(--bs-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial .testimonial-item .testimonial-inner {
+    display: flex;
+    align-items: center;
+    background: var(--bs-white);
+}
+
+.testimonial .testimonial-item .testimonial-inner img {
+    width: 100px;
+    height: 100px;
+    
+}
+
+.testimonial-carousel .owl-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.testimonial-carousel .owl-dots .owl-dot {
+    width: 30px;
+    height: 30px;
+    margin: 30px 10px 0 10px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+
+@media (max-width: 991px) {
+    .testimonial-carousel .owl-dots .owl-dot {
+        margin: 0 10px 0 10px;
+    }
+}
+
+.testimonial-carousel .owl-dots .owl-dot.active {
+    width: 30px;
+    height: 30px;
+    background: var(--bs-primary);
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.testimonial-carousel .owl-dots .owl-dot span {
+    position: relative;
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    margin-right: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.testimonial-carousel .owl-dots .owl-dot.active span::after {
+    background: var(--bs-white);
+    border-radius: 50%;
+
+}
+
+.testimonial-carousel .owl-dots .owl-dot span::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--bs-primary);
+    transition: 0.5s;
+    border-radius: 50%;
+}
+/* .testimonial-item .customer-text{
+    color: white;
+} */
+
+
+/*** Testimonial End ***/
+
+/*** Footer Start ***/
+/* Footer Container */
+/* Base styles (Desktop-first) */
+.footer {
+    background: var(--bs-dark);
+    text-align: left; /* Set default text alignment to left */
+    padding: 20px 0; /* Optional: add padding for better spacing */
+}
+
+/* Footer Items */
+.footer .footer-item {
+    margin-bottom: 20px; /* Spacing between footer items */
+    margin-left: 0; /* Remove negative margin for consistent alignment */
+    
+}
+
+/* Flexbox Layout to Center Footer Items */
+.footer .footer-items-wrapper {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow the items to wrap on smaller screens */
+    gap: 20px; /* Add uniform gap between items */
+    margin: 0 auto; /* Center the footer container itself */
+    max-width: 1200px; /* Limit the width of the footer */
+    padding: 0 20px; /* Padding for better spacing */
+    
+}
+
+/* Footer Links */
+.footer .footer-item a {
+    line-height: 35px;
+    color: var(--bs-white);
+    transition: 0.5s;
+    display: inline-block; /* Ensure the anchor tags are treated as block elements for centering */
+}
+
+/* Footer Paragraph */
+.footer .footer-item p {
+    line-height: 35px;
+}
+.footer .col-lg-5 .d-flex{
+    margin-right: 80px;
+}
+
+/* Hover Effects for Links */
+.footer .footer-item a:hover {
+    letter-spacing: 1px;
+    color: var(--bs-primary);
+}
+
+/* Footer Buttons */
+.footer .footer-item .footer-btn {
+    margin-top: 10px; /* Optional: add some margin to space out buttons */
+}
+
+.footer .footer-item .footer-btn a {
+    transition: 0.5s;
+}
+
+/* Hover Effects for Buttons */
+.footer .footer-item .footer-btn a:hover {
+    background: var(--bs-white);
+    color: var(--bs-primary);
+}
+
+/* Optional: Ensure the footer wrapper does not have extra margins on sides */
+.footer .footer-items-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.footer .ab {
+    margin-right: 80px;
+    margin-bottom: 20px;
+}
+
+
+
+/* Media Query for Mobile Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px 0; /* Adjust padding for mobile */
+    }
+
+    .footer .footer-items-wrapper {
+        flex-direction: column; /* Stack items vertically */
+        padding-left: 0; /* Remove left padding */
+        padding-right: 0; /* Remove right padding */
+        width: 100%; /* Ensure the container spans full width */
+        justify-content: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+    }
+
+    /* Footer items will take full width on mobile, centering the content */
+    .footer .footer-item {
+        width: 90%; /* Make items take 90% of the available width */
+        margin-bottom: 15px; /* Adjust bottom margin */
+        text-align: center; /* Center the text inside the footer item */
+       
+    }
+
+    .footer .footer-item a {
+        font-size: 14px; /* Slightly smaller font size for mobile */
+        line-height: 30px; /* Adjust line height for better readability */
+    }
+
+    .footer .footer-item p {
+        font-size: 14px; /* Adjust font size of paragraphs */
+        line-height: 30px; /* Adjust line height */
+    }
+
+    .footer .footer-btn a {
+        font-size: 14px; /* Adjust button font size */
+    }
+
+    .footer .ab {
+        margin-right: 0; /* Remove margin for better alignment */
+        margin-bottom: 15px; /* Optional: adjust bottom margin */
+    }
+    .footer-item .steps{
+          margin-left: 40%;
+    }
+    .footer-item img{
+         margin-left: 50px;
+    }
+    .col-lg-5 .d-flex{
+        margin-left: 60px;
+    }
+}
+/* Media Query for Smaller Mobiles (max-width: 576px) */
+@media (max-width: 576px) {
+    .footer .footer-item {
+        width: 100%; /* Full width for smaller screens */
+        text-align: center; /* Center-align everything */
+    }
+
+    .footer-item img {
+        margin: 0 auto; /* Ensure images are centered */
+    }
+
+    .footer .footer-btn a {
+        font-size: 12px; /* Further reduce button font size for smaller screens */
+    }
+   
+}
+.design-build-container {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif; /* Adjust the font as needed */
+}
+
+.design-text,
+.build-text {
+    font-size: 1.5rem; /* Adjust text size as needed */
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+
+.ampersand {
+    font-size: 2rem; /* Larger size for the ampersand */
+    font-weight: bold;
+    margin: 10px 0; /* Add some space between the lines */
+    color: white;
+
+}
+
+/* Center alignment for mobile */
+@media (max-width: 768px) {
+    .design-build-container {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Left alignment for laptops and larger screens */
+@media (min-width: 769px) {
+    .design-build-container {
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+/* Media Query for Tablets (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .footer .footer-items-wrapper {
+        flex-direction: row; /* Keep items in rows */
+        gap: 20px; /* Maintain spacing between items */
+        max-width: 100%; /* Ensure full width */
+    }
+
+    .footer .footer-item {
+        width: 48%; /* Make items take 48% width for better spacing on tablet screens */
+    }
+
+    .footer .footer-item a {
+        font-size: 15px; /* Adjust font size for tablet screens */
+    }
+
+    .footer .footer-item p {
+        font-size: 15px; /* Adjust paragraph font size */
+    }
+
+    .footer .footer-btn a {
+        font-size: 15px; /* Adjust button font size */
+    }
+
+    .footer .ab {
+        margin-right: 40px; /* Optional: adjust margin */
+        margin-bottom: 15px; /* Adjust margin for better spacing */
+    }
+    .footer-item .steps{
+       margin-left: 60px;
+  }
+}
+
+/* Media Query for Larger Screens (Desktop & Large Tablets, min-width: 1024px) */
+@media (min-width: 1024px) {
+    .footer .footer-items-wrapper {
+        max-width: 1200px; /* Optionally limit the max-width on larger screens */
+    }
+
+    .footer .footer-item a {
+        font-size: 16px; /* Slightly larger font for larger screens */
+    }
+
+    .footer .footer-item p {
+        font-size: 16px; /* Adjust paragraph font size */
+    }
+
+    .footer .footer-btn a {
+        font-size: 16px; /* Adjust button font size */
+    }
+
+    .footer .ab {
+        margin-right: 80px; /* Larger margin for large screens */
+        margin-bottom: 20px; /* Adjust bottom margin for large screens */
+    }
+}
+
+/* Media Query for Larger Screens (Desktop & Large Tablets, min-width: 1024px) */
+@media (min-width: 1024px) {
+    .footer .footer-items-wrapper {
+        max-width: 1200px; /* Optionally limit the max-width on larger screens */
+    }
+
+    .footer .footer-item a {
+        font-size: 16px; /* Slightly larger font for larger screens */
+    }
+
+    .footer .footer-item p {
+        font-size: 16px; /* Adjust paragraph font size */
+    }
+
+    .footer .footer-btn a {
+        font-size: 16px; /* Adjust button font size */
+    }
+
+    .footer .ab {
+        margin-right: 80px; /* Larger margin for large screens */
+        margin-bottom: 20px; /* Adjust bottom margin for large screens */
+    }
+}
+
+
+
+
+
+/*** copyright Start ***/
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--bs-dark);
+}
+
+/*** copyright end ***/
+
+
+/* Gradient Text */
+.gradient-text1 {
+    background: linear-gradient(to right, #A36140, #b1b1b1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4rem;
+}
+
+
+.slider-wrapper {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px;
+}
+.user-name{
+    margin-top: 5vh;
+}
+
+.card-list .card-item {
+    height: auto;
+    color: #fff;
+    user-select: none;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.card-list .card-item .user-image {
+    width: 300px;
+    height: 300px;
+    border: 3px solid #fff;
+
+}
+
+.user-profession {
+    color: black;
+}
+
+.card-list .card-item {
+    font-size: 1.15rem;
+    color: #e3e3e3;
+    font-weight: 500;
+    margin: 24px 0px
+}
+
+.card-list .card-item .message-button {
+    font-size: 1.25rem;
+    padding: 10px 35px;
+    color: #030728;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+}
+
+.card-list .card-item .message-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.slider-wrapper .swiper-pagination-bullet {
+    background: #A36140;
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+}
+
+.slider-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.slider-wrapper .swiper-slide-button {
+    color: #A36140;
+    margin-top: -55px;
+    transition: 0.2s ease;
+}
+
+.slider-wrapper .swiper-slide-button:hover {
+    color: #4658ff;
+}
+
+@media (max-width: 768px) {
+    body{
+        text-align: center;
+    }
+    .slider-wrapper {
+        margin: 0 10px 20px;
+    }
+
+    .slider-wrapper .swiper-slide-button {
+        display: none;
+    }
+
+    .swiper-slide-button {
+        display: flex;
+    }
+
+    .Images_3 {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .Images_3 img {
+        width: 27vh;
+        margin-left: 2vh;
+        border: 1px solid black;
+
+    }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .Images_3 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .Images_3 img {
+        width: 37vh;
+        margin-left: 1.5vh;
+        border: 1px solid black;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .Images_3 {
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+        justify-content: center;
+        align-items: center;
+
+    }
+   
+
+    .Images_3 img {
+        width: 25vh;
+        margin-left: 1vh;
+        border: 1px solid black;
+    }
+    .header-carousel.owl-carousel,
+    .header-carousel .header-carousel-item {
+        height: 1050px;
+    }
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+    justify-content: center;
+    align-items: start;
+    color: white;
+
+}
+
+.step {
+    margin-bottom: 10px;
+}
+
+.step-text {
+    font-size: 28px;
+    font-weight: bold;
+}
+.font-size-increase {
+    font-size: 2.5em; /* or any other value you prefer */
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+
+  }
+  
+  .grid-item {
+    width: 100%;
+  }
+  
+  /* For tablet views */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* For mobile views */
+  @media (max-width: 480px) {
+    .grid-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+/* .steps>.step:nth-child(1) .step-text {
+    color: rgb(255, 255, 255);
+}
+
+.steps>.step:nth-child(1) .step-line {
+    background-color: rgb(255, 136, 0);
+    width: 90px;
+
+}
+
+.steps>.step:nth-child(2) .step-text {
+    color: rgb(255, 255, 255);
+}
+
+.steps>.step:nth-child(2) .step-line {
+    background-color: rgb(255, 255, 255);
+}
+
+.steps>.step:nth-child(3) .step-text {
+    color: rgb(255, 255, 255);
+}
+
+.steps>.step:nth-child(3) .step-line {
+    background-color: rgb(0, 255, 0);
+    width: 70px;
+
+
+
+} */
+ /* Style for the container (aboutbuttn1) */
+#aboutButtonContainer {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Horizontally center the button */
+    align-items: center; /* Vertically center the button */
+    height: 100vh; /* Take full viewport height */
+    margin-left: -3vh; /* Keeps the existing left margin */
+}
+
+/* Style for the button (buttonClass1) */
+#contactButton {
+    padding: 15px;
+    margin-top: 15vh; /* Keeps the top margin you provided */
+    text-align: center; /* Centers text inside the button */
+    display: inline-block; /* Allows padding and margin to be respected */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 576px) {
+    #aboutButtonContainer {
+        height: 100vh; /* Ensures the container takes full viewport height */
+        margin-left: 0; /* Remove negative margin on mobile */
+        justify-content: center; /* Ensures button is centered horizontally */
+        align-items: center; /* Ensures button is centered vertically */
+    }
+
+    #contactButton {
+        margin-top: 0; /* Remove extra margin-top for centering */
+    }
+}
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Make the button appear at the bottom of the image */
+    .col-lg-7 {
+        position: relative;
+    }
+
+    .aboutbuttn1 {
+        position: absolute;
+        top: 750px; /* Adjust the space from the bottom of the image */
+        left: 50%;
+        transform: translateX(-50%); /* Center the button horizontally */
+        padding: 15px;
+        margin-top: 0; /* Remove margin-top on mobile */
+    }
+
+    /* Optional: Adjust button padding or other properties on mobile */
+    .buttonClass1 {
+        padding: 12px 20px; /* Slightly smaller button on mobile */
+    }
+}
+
+/* WhatsApp Button Default Styles */
+.whatsapp-btn {
+    position: fixed; /* Fixed position to stay visible while scrolling */
+    bottom: 70px; /* Default space from the bottom (adjustable) */
+    right: 10px; /* Space from the right edge */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Circular shape */
+    padding: 15px; /* Padding around the logo */
+    transition: 0.5s ease; /* Smooth transition effect */
+    z-index: 99;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+}
+
+/* WhatsApp Logo Styling */
+.whatsapp-logo {
+    width: 50px; /* Default size */
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+/* Hover Effect */
+.whatsapp-btn:hover {
+    transform: scale(1.1); /* Slightly increase size of the button */
+}
+
+.whatsapp-btn:hover .whatsapp-logo {
+    transform: scale(1.2); /* Slightly grow the logo on hover */
+}
+
+/* Responsive Design - Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .whatsapp-logo {
+        width: 40px; /* Smaller logo for tablets */
+        height: 40px;
+    }
+
+    .whatsapp-btn {
+        padding: 10px; /* Adjust padding for smaller screens */
+        right: 50px; /* Keep it close to the right edge */
+        bottom: 20px; /* Adjust space from the bottom */
+    }
+}
+
+/* Responsive Design - Mobile (max-width: 576px) */
+@media (max-width: 576px) {
+    .whatsapp-logo {
+        width: 45px; /* Smallest size for mobile screens */
+        height: 45px;
+    }
+
+    .whatsapp-btn {
+        padding: 8px; /* Adjust padding for compact view */
+        bottom: 80px; /* Stick the button a little lower on mobile */
+        right: 20px; /* Keep closer to the right edge */
+    }
+}
+/* Show the WhatsApp Button when the user scrolls down */
+.show {
+    opacity: 1; /* Make the button visible */
+    visibility: visible; /* Make it visible */
+}
+
+/* Container Display */
+.container-fluid1 .display-5 {
+    margin-left: 5%; /* Use percentage for more fluid positioning */
+    text-align: center; /* Optional, for better centering */
+    font-size: 3vw; /* Dynamic font size based on viewport width */
+}
+
+/* Button Styling within col-lg-4 */
+.col-lg-4 .d-flex .btn {
+    color: white;
+    background-color: #a95e34;
+    font-size: 1.5vw; /* Use relative units for font size */
+    padding: 1rem 2rem; /* Use rem for padding to make it responsive */
+    border-radius: 5px; /* Rounded corners for the button */
+    transition: background-color 0.3s ease; /* Smooth color change on hover */
+    margin-left: 100px; /* Removed the negative margin to prevent shifting */
+    
+}
+
+.col-lg-4 .d-flex .btn:hover {
+    background-color: #8b4a22; /* Darker color on hover */
+}
+
+/* Flexbox Layout for Button Container */
+.col-lg-4 .d-flex {
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    align-items: center; /* Centers the button vertically */
+    height: 100%; /* Ensure the flex container takes full height */
+}
+
+/* Responsive Adjustments */
+
+/* For tablets and medium-sized screens */
+@media (max-width: 1024px) {
+    .container-fluid1 .display-5 {
+        font-size: 4.5vw; /* Adjust text size to be fluid */
+        margin-left: 5%; /* Use percentage for responsiveness */
+    }
+
+    .col-lg-4 .d-flex .btn {
+        font-size: 3vw; /* Slightly smaller buttons on medium screens */
+        padding: 1.2rem 2.5rem; /* Adjust padding for medium screens */
+    }
+}
+
+/* For smaller screens (mobile view) */
+@media (max-width: 768px) {
+    .container-fluid1 .display-5 {
+        font-size: 5vw; /* Larger text for mobile view */
+        margin-left: 5%; /* Keep it proportional */
+    }
+  
+
+    .col-lg-4 .d-flex .btn {
+        font-size: 4vw; /* Smaller buttons on mobile */
+        padding: 1rem 2rem; /* Smaller padding on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .container-fluid1 .display-5 {
+        font-size: 6vw; /* Further adjust font size for very small screens */
+    }
+
+    .col-lg-4 .d-flex .btn {
+        font-size: 5vw; /* Even smaller buttons */
+        padding: 0.8rem 1.5rem; /* Reduced padding on small screens */
+    }
+}
+

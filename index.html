@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Shubh Interiors</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <!-- Linking SwiperJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/clientSlider.css">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Edu+TAS+Beginner:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="lib/animate/animate.min.css" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Navbar -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const carousel = document.querySelector(".carousel");
+            const arrowBtns = document.querySelectorAll(".wrapper i");
+            const wrapper = document.querySelector(".wrapper");
+
+            const firstCard = carousel.querySelector(".card");
+            const firstCardWidth = firstCard.offsetWidth;
+
+            let isDragging = false,
+                startX,
+                startScrollLeft,
+                timeoutId;
+
+            const dragStart = (e) => {
+                isDragging = true;
+                carousel.classList.add("dragging");
+                startX = e.pageX;
+                startScrollLeft = carousel.scrollLeft;
+            };
+
+            const dragging = (e) => {
+                if (!isDragging) return;
+
+                // Calculate the new scroll position
+                const newScrollLeft = startScrollLeft - (e.pageX - startX);
+
+                // Check if the new scroll position exceeds 
+                // the carousel boundaries
+                if (newScrollLeft <= 0 || newScrollLeft >=
+                    carousel.scrollWidth - carousel.offsetWidth) {
+
+                    // If so, prevent further dragging
+                    isDragging = false;
+                    return;
+                }
+
+                // Otherwise, update the scroll position of the carousel
+                carousel.scrollLeft = newScrollLeft;
+            };
+
+            const dragStop = () => {
+                isDragging = false;
+                carousel.classList.remove("dragging");
+            };
+
+            const autoPlay = () => {
+
+                // Return if window is smaller than 800
+                if (window.innerWidth < 800) return;
+
+                // Calculate the total width of all cards
+                const totalCardWidth = carousel.scrollWidth;
+
+                // Calculate the maximum scroll position
+                const maxScrollLeft = totalCardWidth - carousel.offsetWidth;
+
+                // If the carousel is at the end, stop autoplay
+                if (carousel.scrollLeft >= maxScrollLeft) return;
+
+                // Autoplay the carousel after every 2500ms
+                timeoutId = setTimeout(() =>
+                    carousel.scrollLeft += firstCardWidth, 2500);
+            };
+
+            carousel.addEventListener("mousedown", dragStart);
+            carousel.addEventListener("mousemove", dragging);
+            document.addEventListener("mouseup", dragStop);
+            wrapper.addEventListener("mouseenter", () =>
+                clearTimeout(timeoutId));
+            wrapper.addEventListener("mouseleave", autoPlay);
+
+            // Add event listeners for the arrow buttons to 
+            // scroll the carousel left and right
+            arrowBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    carousel.scrollLeft += btn.id === "left" ?
+                        -firstCardWidth : firstCardWidth;
+                });
+            });
+        });
+
+    </script>
+</head>
+
+<body class="makeCenter">
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+
+    <!-- Navbar & Hero Start -->
+    <nav>
+        <!-- Checkbox for toggling menu -->
+        <input type="checkbox" id="check">
+        <!-- Menu icon -->
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <!-- Site logo -->
+        <img src="./img/ShubhLogo.png" alt="Logo" class="logo-img">
+        <!-- Navigation links -->
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Now</a></li>
+
+
+        </ul>
+    </nav>
+    <!-- Navbar & Hero End -->
+
+
+
+
+
+
+    <!-- Carousel Start -->
+    <!-- Carousel Start -->
+    <div class="header-carousel owl-carousel overflow-hidden">
+        <div class="header-carousel-item hero-section">
+            <div class="carousel-caption">
+                <div class="container">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-7 animated fadeInLeft">
+                            <div class="text-sm-center text-md-start">
+                                <h1 class="display-2 text-white mb-10"
+                                    style="font-size: 4rem; margin-bottom: 5vh;font-family: 'Lucida', serif;">
+                                    <span class="gradient-text1">Get tailored interiors</span> with our expert team.
+                                </h1>
+                                <p class="mb-5 fs-5 " style="font-family: 'Lucida', serif;">
+                                    Our premium interiors seamlessly reflect your brand’s unique identity, blending
+                                    style with functionality.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fixed Buttons within the carousel -->
+            <div class="carousel-buttons">
+                <a class="btn btn-light" href="./contact.html">Contact Us</a>
+                <a class="btn btn-light" href="portfolio.html">View Projects</a>
+            </div>
+        </div>
+
+        <div class="header-carousel-item hero-section">
+
+            <div class="carousel-caption">
+                <div class="container">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-7 animated fadeInLeft">
+                            <div class="text-sm-center text-md-start">
+                                <h1 class="display-2 text-white mb-4"
+                                    style="font-size: 4rem; font-family: 'Lucida', serif;">
+                                    <span class="gradient-text1">Creating beautiful functional</span> interiors tailored
+                                    to you
+                                </h1>
+                                <p class="mb-5 fs-5" style="font-family: 'Lucida', serif;">
+                                    Every corner is thoughtfully designed to create a harmonious living experience.
+                                    Transform your space into a sanctuary of beauty.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fixed Buttons within the carousel -->
+            <div class="carousel-buttons">
+                <a class="btn btn-light" href="./contact.html">Contact Us</a>
+                <a class="btn btn-light  "  href="portfolio.html">View Projects</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel End -->
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid about py-5" style="background-image: url('./img/1500back.png');">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="h-100">
+                        <div class="aboutbuttn">
+                            <h4 class="mb-4 fs-1" style="color: #a95e34;">About Us</h4>
+
+                        </div>
+
+                        <p class="mb-4" style="color: black; text-align: justify;">
+                            Shubh Interiors seamlessly blends ergonomic innovation, captivating aesthetics, and
+                            cutting-edge technology to craft spaces that inspire and elevate the professional
+                            experience. Unique in the industry, Shubh Interiors focuses on fostering creativity by
+                            curating atmospheres that spark innovation and enrich lives. <br><br>Exceptional success is
+                            evident in the transformative impact on those inhabiting their spaces. With a meticulously
+                            refined office construction process, Shubh Interiors turns workspace aspirations into
+                            vibrant realities. For organizations seeking to transform vision into a living masterpiece,
+                            Shubh Interiors stands as the premier choice.
+
+                        </p>
+
+                        <a class="btn btn-primary" href="contact.html">Contact us</a>
+
+                    </div>
+                </div>
+                <div class="col-lg-5 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="position-relative h-100">
+                        <img src="./img/Tata Autocom/2.jpeg" class="img-fluid w-100 h-100" style="object-fit: cover;"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner Start -->
+    <div class="container-fluid1 banner py-5 wow zoomIn" data-wow-delay="0.2s">
+        <div class="banner-design-1"></div>
+        <div class="banner-design-2"></div>
+        <div class="container py-5">
+            <div class="row g-5 align-items-center"> <!-- Added align-items-center -->
+                <div class="col-lg-8">
+                    <div>
+                        <h1 class="display-5 text-white  mb-0">Fast-Track Your Office Project
+                            Design and Build in 60 Days</h1>
+                    </div>
+                </div>
+                <div class="col-lg-4 ">
+                    <a class="btn btn-primary explore"
+                        style="width: 200px; height: 50px; display: flex; margin-left: 90px; justify-content: center; align-items: center;"
+                        href="#">Explore More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
+
+    <!-- Banner End -->
+
+
+
+    <!-- Porfolio Start -->
+    <div class="Portfolio">
+        <div class="container-fluid service py-5" style="background-image: url('./img/1500back.png');">
+            <div class="container py-5">
+                <div class="d-flex flex-column mx-auto text-center wow fadeInUp" data-wow-delay="0.2s"
+                    style="max-width: 800px; ">
+                    <div class="aboutbuttn">
+                        <h4 class="mb-4 fs-1" style="color: #A95e34;">Our Portfolio</h4>
+
+                    </div>
+
+                    <h1 class="display-4 fs-1 mb-4">Few Glimpses of our work</h1>
+
+                </div>
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-3 wow fadeInLeft" data-wow-delay="0.2s">
+                        <ul class="nav">
+                            <li class="nav-item me-lg-0 mb-4">
+                                <a class="py-3 px-5 active" data-bs-toggle="pill">
+                                    <span class="aa">Rethink</span>
+                                </a>
+                            </li>
+                            <li class="nav-item me-lg-0 mb-4">
+                                <a class="py-3 px-5" data-bs-toggle="pill">
+                                    <span class="aa">Redesign</span>
+                                </a>
+                            </li>
+                            <li class="nav-item me-lg-0 mb-4 mb-lg-0">
+                                <a class="py-3 px-5" data-bs-toggle="pill">
+                                    <span class="aa">Recreate</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-9 wow fadeInRight" data-wow-delay="0.3s">
+                        <div class="tab-content">
+                            <div id="ServiceTab-1" class="tab-pane fade show p-0 active">
+                                <div class="service-carousel owl-carousel owl-theme">
+                                    <div class="service-item">
+                                        <img src="img/temp/7.png " class="img-fluid w-100" alt="">
+                                        <div class="border border-top-0 p-4">
+                                            <h4 class="mb-3">TATA AUTOCOMP </h4>
+                                            <p class="mb-4"> Project Size: 100000 sq.ft<br>
+
+                                                Deliver In : 8 Months
+                                            </p>
+                                            <a class="btn btn-primary py-2 px-4" href="./ImageGallery/Tata.html">Read
+                                                More</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="service-item">
+                                        <img src="img/temp/3.png" class="img-fluid w-100" alt="">
+                                        <div class="border border-top-0 p-4">
+                                            <h4 class="mb-3">ATGEIR </h4>
+                                            <p class="mb-4"> Project Size: 6000 sq.ft<br>
+
+                                                Deliver In : 35 days
+                                            </p>
+                                            <a class="btn btn-primary py-2 px-4"
+                                                href="./ImageGallery/AtgeirGallery.html">Read More</a>
+                                        </div>
+                                    </div>
+                                    <div class="service-item">
+                                        <img src="img/temp/2.png" class="img-fluid w-100" alt="">
+                                        <div class="border border-top-0 p-4">
+                                            <h4 class="mb-3"> MAVENIR</h4>
+                                            <p class="mb-4">Project Size: 6000 sq.ft<br>
+
+                                                Deliver In : 45 days
+                                            </p>
+                                            <a class="btn btn-primary py-2 px-4" href="./ImageGallery/Mavenir.html">Read
+                                                More</a>
+                                        </div>
+                                    </div>
+                                    <div class="service-item">
+                                        <img src="img/temp/4.png" class="img-fluid w-100" alt="">
+                                        <div class="border border-top-0 p-4">
+                                            <h4 class="mb-3"> THE 10TH DIMENSION</h4>
+                                            <p class="mb-4"> Project Size: 9000 sq.ft<br>
+
+                                                Deliver In : 90 days
+                                            </p>
+                                            <a class="btn btn-primary py-2 px-4"
+                                                href="./ImageGallery/Dimension.html">Read More</a>
+                                        </div>
+                                    </div>
+                                    <div class="service-item">
+                                        <img src="./img//temp/1.png" class="img-fluid w-100" alt="">
+                                        <div class="border border-top-0 p-4">
+                                            <h4 class="mb-3"> TECHNOGISE</h4>
+                                            <p class="mb-4"> Project Size: 6000 sq.ft<br>
+
+                                                Deliver In : 45 days
+                                            </p>
+                                            <a class="btn btn-primary py-2 px-4"
+                                                href="./ImageGallery/Technogise.html">Read More</a>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="service-item">
+                                        <img src="./img/temp/5.png" class="img-fluid w-100" alt="">
+                                        <div class="border border-top-0 p-4">
+                                            <h4 class="mb-3">MANPOWER GROUP </h4>
+                                            <p class="mb-4">
+                                                Project Size: 9000 sq.ft<br>
+                                                Project Location: Pune, Maharashtra<br>
+                                                Deliver In :
+                                            </p>
+                                            <a class="btn btn-primary py-2 px-4" href="#">Read More</a>
+                                        </div>
+                                    </div> -->
+
+
+
+
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    </div>
+
+
+    <!-- POrtfolio End -->
+
+    <!-- Services Start -->
+    <div class="container-fluid projects bg-light" style="background-image: url('./img/1500back.png');">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div>
+                        <div class="aboutbuttn">
+                            <h4 class="mb-4 fs-1" style="color: #a95e34;">Our Services</h4>
+
+                        </div>
+                        <h1 class="display-4 mb-4 fs-1">We offer a variety of personalized designs</h1>
+                        <p class="mb-5">We specialize in creating luxurious living spaces that reflect your personal
+                            style. Whether it’s modern traditional or eclectic our designs exude elegance and
+                            comfort tailored to your lifestyle.</p>
+                        <ul class="nav">
+                            <li class="nav-item bg-white mb-4 w-100">
+                                <a class="d-flex align-items-center h4 mb-0 p-3 active" data-bs-toggle="pill"
+                                    href="#ProjectsTab-1">
+                                    <div class="projects-icon btn-md-square bg-primary text-white me-3"
+                                        style="color: #ffffff; background-color: #ffffff;">
+                                        <span class="fas fa-building small"></span>
+                                    </div><span>Commercial</span>
+                                </a>
+                            </li>
+                            <li class="nav-item bg-white mb-4 w-100">
+                                <a class="d-flex align-items-center h4 mb-0 p-3" data-bs-toggle="pill"
+                                    href="#ProjectsTab-2">
+                                    <div class="projects-icon btn-md-square bg-primary text-white me-3"><span
+                                            class="fas fa-hospital small"></span></div><span>Hospitality</span>
+                                </a>
+                            </li>
+                            <li class="nav-item bg-white mb-4 w-100">
+                                <a class="d-flex align-items-center h4 mb-0 p-3" data-bs-toggle="pill"
+                                    href="#ProjectsTab-3">
+                                    <div class="projects-icon btn-md-square bg-primary text-white me-3"><span
+                                            class="fas fa-home small"></span></div><span>Home
+                                        Designing</span>
+                                </a>
+                            </li>
+                            <li class="nav-item bg-white mb-4 w-100">
+                                <a class="d-flex align-items-center h4 mb-0 p-3" data-bs-toggle="pill"
+                                    href="#ProjectsTab-4">
+                                    <div class="projects-icon btn-md-square bg-primary text-white me-3"><span
+                                            class="fas fa-sync-alt small"></span></div><span>Styling</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="tab-content">
+                        <div id="ProjectsTab-1" class="tab-pane fade show p-0 active">
+                            <div class="projects-item">
+                                <img src="img/commercial.jpeg" class="img-fluid w-100" alt="">
+                                <div class="projects-content bg-white p-4">
+                                    <h4 class="mb-3">Commercial</h4>
+                                    <p class="mb-4">We handle a wide range of commercial projects, including:
+                                    <ul>
+                                        <li>Corporate offices</li>
+                                        <li>IT offices</li>
+                                        <li>Healthcare facilities </li>
+                                        <li>Specialized infrastructure and design.</li>
+                                        <li>Industrial offices</li>
+                                    </ul>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ProjectsTab-2" class="tab-pane fade show p-0">
+                            <div class="projects-item">
+                                <img src="img/hospitality.jpeg" class="img-fluid w-100" alt="">
+                                <div class="projects-content bg-white p-4">
+                                    <h4 class="mb-3">Hospitality</h4>
+                                    <p class="mb-4">At Shubh Interiors, we craft exceptional, appealing interiors for:
+                                    <ul>
+                                        <li>Welcoming hotels</li>
+                                        <li>Relaxing salons</li>
+                                        <li>Flavorful restaurants</li>
+                                        <li>Cozy cafes</li>
+                                    </ul>
+                                    </p>
+
+                                    <!-- <a class="btn btn-primary py-2 px-4" href="#">Read More</a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ProjectsTab-3" class="tab-pane fade show p-0">
+                            <div class="projects-item">
+                                <img src="img/Home.jpeg" class="img-fluid w-100" alt="">
+                                <div class="projects-content bg-white p-4">
+                                    <h4 class="mb-3">Home Designing</h4>
+                                    <p class="mb-4">At Shubh Interiors, we craft exceptional, appealing interiors for:
+                                    <ul>
+
+                                        <li>Elegant 2BHK homes</li>
+                                        <li>Expansive 3BHK residences</li>
+                                        <li>Expansive 4BHK residences</li>
+                                        <li>Sophisticated bungalows</li>
+                                    </ul>
+                                    </p>
+                                    <!-- <a class="btn btn-primary py-2 px-4" href="#">Read More</a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ProjectsTab-4" class="tab-pane fade show p-0">
+                            <div class="projects-item">
+                                <img src="img/styling.jpeg" class="img-fluid w-100" alt="">
+                                <div class="projects-content bg-white p-4">
+                                    <h4 class="mb-4">Styling</h4>
+                                    <p class="mb-4">At Shubh Interiors, we craft exceptional, appealing interiors for:
+                                    <ul>
+                                        <li>Enhanced functionality and aesthetics
+
+                                        </li>
+                                        <li>Fresh, personalized décor</li>
+                                        <li>Customized solutions</li>
+                                        <li>Seamless expert guidance</li>
+                                    </ul>
+                                    </p>
+                                    <!-- <a class="btn btn-primary py-2 px-4" href="#">Read More</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/7506753363" target="_blank" id="whatsappBtn" class="whatsapp-btn">
+        <img src="img/WhatsApp.png" alt="WhatsApp" class="whatsapp-logo">
+    </a>
+
+    <!-- Work Done Banner start-->
+    <div class="bg-dark p-6 rounded-lg shadow-lg m-5 mb-1" style="border-radius: 10px; ">
+        <div class="grid-container">
+            <div class="text-center grid-item">
+                <h2 class="text-3xl font-bold text-primary" style="font-size: 36px;">2M+</h2>
+                <p class="text-muted-foreground text-white" style="font-size: 18px;">Sq. Ft. Of Office Space Designed
+                </p>
+            </div>
+            <div class="text-center grid-item">
+                <h2 class="text-3xl font-bold text-primary" style="font-size: 36px;">10+</h2>
+                <p class="text-muted-foreground text-white" style="font-size: 18px;">Cities accessing our services
+                    worldwide</p>
+            </div>
+            <div class="text-center grid-item">
+                <h2 class="text-3xl font-bold text-primary" style="font-size: 36px;">150+</h2>
+                <p class="text-muted-foreground text-white" style="font-size: 18px;">Office Spaces Designed and Built
+                </p>
+            </div>
+            <div class="text-center grid-item">
+                <h2 class="text-3xl font-bold text-primary" style="font-size: 36px;">100%</h2>
+                <p class="text-muted-foreground text-white" style="font-size: 18px;">Client Retention for Subsequent
+                    Office Spaces</p>
+            </div>
+        </div>
+    </div>
+    <!--Work Done Banner end  -->
+
+    <!-- Logo Slider Start -->
+    <div class="aboutbuttn">
+        <h4 class="mb-4 fs-1" style="color: #a95e34; text-align: center; margin-top: 15vh;">Our Esteemed Clientele</h4>
+
+    </div>
+    <div class="slider" style="margin-top: 1vh;">
+        <div class="item"><a href=""><img alt="logo" src="./Logo/tata.png"></a></div>
+
+        <div class="item"><a href=""><img alt="logo" src="./Logo/1.png"></a></div>
+        <div class="item"><a href=""><img alt="logo" src="./Logo/godrej.png"></a></div>
+        <div class="item"><a href=""><img alt="logo" src="./Logo/2.png"></a></div>
+        <div class="item"><a href=""><img alt="logo" src="./Logo/3.png"></a></div>
+        <div class="item"><a href=""><img alt="logo" src="./Logo/4.png"></a></div>
+        <div class="item"><a href=""><img alt="logo" src="./Logo/5.png"></a></div>
+        <div class="item"><a href=""><img alt="logo" src="./Logo/6.png"></a></div>
+        <div class="item"><a href=""><img alt="logo" src="./Logo/1.png"></a></div>
+        <div class="item"><a href=""><img alt="logo" src="./Logo/godrej.png"></a></div>
+        <div class="item"><a href=""><img alt="logo" src="./Logo/2.png"></a></div>
+
+    </div>
+    <div class="Images_3" style="margin-top: 6vh; margin-bottom: 10vh; text-align: center; margin-left: 2vh;">
+        <img src="./Logo/tata.png" alt="">
+        <img src="./Logo/5.png" alt="">
+        <img src="./Logo/godrej.png" alt="">
+    </div>
+
+
+    <!-- Logo Slider End -->
+    <!-- Blog Start -->
+    <!-- <div class="Blogs">
+        <div class="container-fluid blog py-5" style="background-image: url('./img/1500back.png'); margin-top: -14vh;">
+            <div class="container py-5">
+                <div class="d-flex flex-column mx-auto text-center mb-5 wow fadeInUp" data-wow-delay="0.2s"
+                    style="max-width: 800px;">
+                    <h4 class="text-primary">Our Blog</h4>
+                    <h1 class="display-4 mb-4">Crafting Elegance, Inspiring Harmony</h1>
+                    <p class="mb-0">Our blogs are designed to inspire and guide you, showcasing our expertise in
+                        interior
+                        design. At SHUBH Interiors, we believe in creating spaces that are not only beautiful but also
+                        meaningful.
+                    </p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="./Logo/blog2.png" class="img-fluid w-100" alt="">
+                            </div>
+                            <div class="blog-heading ms-4">
+                                <a href="#" class="h4 mb-0 fs-5 p-4" style="margin-left: -2.5vh;">Transform Your Living
+                                    Space with Minimalist Design</a>
+                            </div>
+                            <div class="blog-content bg-light p-4">
+
+                                <p class="mb-4">In today's fast-paced world, minimalist design is trending, emphasizing
+                                    simplicity and functionality without sacrificing style. At SHUBH Interiors, we
+                                    believe a minimalist approach can transform your living space into a peaceful
+                                    sanctuary. This blog explores key principles of minimalist design and how to
+                                    incorporate them into your home.
+
+                                </p>
+                                <a class="btn btn-primary py-2 px-4" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="./Logo/blog1.png" class="img-fluid w-100 " alt="">
+                            </div>
+                            <div class="blog-heading ms-4">
+                                <a href="#" class="h4 mb-0 fs-5 p-4" style="margin-left: -2.5vh;">5 Tips to Create a
+                                    Functional Home Office</a>
+                            </div>
+                            <div class="blog-content bg-light p-4">
+
+                                <p class="mb-4">With the rise of remote work, having a dedicated home office has become
+                                    essential. However, it’s not just about having a desk and chair; the space should be
+                                    designed to boost productivity and creativity.
+                                    At SHUBH Interiors, we’ve compiled five essential tips to help you create a
+                                    functional
+                                    home office.
+
+                                </p>
+                                <a class="btn btn-primary py-2 px-4" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="img/download (2).jfif" class="img-fluid w-100" alt="">
+                            </div>
+                            <div class="blog-heading ms-4">
+                                <a href="#" class="h4 mb-0 fs-5 p-4" style="margin-left: -2.5vh;">The Perfect Color
+                                    Palette for
+                                    Your Home</a>
+                            </div>
+                            <div class="blog-content bg-light p-4">
+
+                                <p class="mb-4">
+                                    Colors set the mood and ambiance of your home. The right palette creates a warm,
+                                    inviting, and harmonious space. In this blog, SHUBH Interiors guides you through
+                                    selecting perfect colors for your home, ensuring a cohesive and stylish look that
+                                    reflects your personality and complements your interior design.
+                                </p>
+                                <a class="btn btn-primary py-2 px-4" href="#" style="margin-top: 4vh;">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Blog End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid testimonial bg-dark py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-6 col-xl-5 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="aboutbuttn">
+                        <h4 class="mb-4 fs-1" style="color: #a95e34;">Testimonial</h4>
+
+                    </div>
+                    <h1 class="display-4 text-white mb-4">Powerfull Praise Heare From Our Customers</h1>
+                    <p class="mb-4" ">Their heartfelt words highlight how we consistently exceed expectations, making a
+                        real difference in their experiences. With each testimonial, we are reminded of the trust and
+                        satisfaction we've built with our clients, inspiring us to keep raising the bar.
+                    </p>
+                    <a class=" btn btn-light py-3 px-5" href="#">View All Reviews</a>
+                </div>
+                <div class="col-lg-6 col-xl-7 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="testimonial-item">
+                            <div class="testimonial-quote"><i class="fa fa-quote-right fa-2x"></i>
+                            </div>
+                            <div class="testimonial-inner p-4">
+                                <img src="./Logo/person.png" class="img-fluid" alt="">
+                                <div class="ms-4">
+                                    <h4>Rahul Pawar</h4>
+                                    <div class="d-flex text-primary">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star text-body"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="customer-text p-4">
+                                <p class="mb-0" >Customer satisfaction is at the heart of everything we do. With a focus
+                                    on quality and attention to detail, we ensure that each interaction is seamless and
+                                    leaves a lasting impression. Our goal is to exceed your expectations every time.</p>
+                            </div>
+                        </div>
+                        <div class=" testimonial-item">
+                                <div class="testimonial-quote"><i class="fa fa-quote-right fa-2x"></i>
+                                </div>
+                                <div class="testimonial-inner p-4">
+                                    <img src="./Logo/person.png" class="img-fluid" alt="">
+                                    <div class="ms-4">
+                                        <h4>Rayhan Shaikh</h4>
+                                        <div class="d-flex text-primary">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customer-text p-4">
+                                    <p class="mb-0">Exceptional service and unmatched quality are what set us apart. Our
+                                        dedication to excellence drives us to continually innovate and exceed customer
+                                        expectations. Every experience with us is a testament to our commitment to
+                                        delivering only the best</p>
+                                </div>
+                            </div>
+                            <div class="testimonial-item">
+                                <div class="testimonial-quote"><i class="fa fa-quote-right fa-2x"></i>
+                                </div>
+                                <div class="testimonial-inner p-4">
+                                    <img src="./Logo/person.png" class="img-fluid" alt="">
+                                    <div class="ms-4">
+                                        <h4>Pooja Aher</h4>
+                                        <div class="d-flex text-primary">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star text-body"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customer-text p-4">
+                                    <p class="mb-0">From the moment you connect with us, you’ll notice the difference in
+                                        care and dedication. We strive to provide personalized experiences that meet
+                                        your
+                                        unique needs, ensuring every step of your journey with us is <br /> exceptional
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+        <!-- Team Start -->
+        <div class="Teams" style="margin-top: 10vh;">
+            <div class="container-fluid team pb-5" style="background-image: url('./img/1500back.png');">
+                <div class="container pb-5">
+                    <div class="d-flex flex-column mx-auto text-center mb-5 wow fadeInUp" data-wow-delay="0.2s"
+                        style="max-width: 800px;">
+
+                        <div class="aboutbuttn">
+                            <h4 class="mb-4 fs-1" style="color: #a95e34;">Meet Our Team</h4>
+
+                        </div>
+                        <p class="mb-15">At SHUBH Interiors, we believe that our people are our greatest asset. We are
+                            always
+                            looking for talented and passionate individuals to join our team. If you are interested in
+                            being part of a dynamic and innovative company, please reach out to us
+
+                        </p>
+                    </div>
+                    <div class="container swiper" style="margin-top: -10vh;">
+                        <div class="slider-wrapper">
+                            <div class="card-list swiper-wrapper">
+                                <div class="card-item swiper-slide">
+                                    <img src="./img/team-1.png" alt="User Image" class="user-image">
+                                    <h2 class="user-name">Aashi Jain</h2>
+                                </div>
+                                <div class="card-item swiper-slide">
+                                    <img src="./img/team-2.png" alt="User Image" class="user-image">
+                                    <h2 class="user-name">Ajit Babar</h2>
+                                </div>
+                                <div class="card-item swiper-slide">
+                                    <img src="./img/team-3.png" alt="User Image" class="user-image">
+                                    <h2 class="user-name" style="font-size: 1.7rem;">Gauri Kannawar</h2>
+                                </div>
+                                <div class="card-item swiper-slide">
+                                    <img src="./img/team-4.png" alt="User Image" class="user-image">
+                                    <h2 class="user-name" style="font-size: 1.7rem;">Sainath Enchure</h2>
+
+                                </div>
+                                <div class="card-item swiper-slide">
+                                    <img src="./img/team-5.png" alt="User Image" class="user-image">
+                                    <h2 class="user-name" style="font-size: 1.7rem;">Supriya Laygude</h2>
+
+                                </div>
+
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-slide-button swiper-button-prev"></div>
+                            <div class="swiper-slide-button swiper-button-next"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+
+
+
+        <!-- FAQ Start -->
+        <div class="container-fluid faq-section bg-light py-5" style="background-image: url('./img/1500back.png');">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="aboutbuttn">
+                            <h4 class="mb-4 fs-1" style="color: #a95e34;">Some Important FAQ's</h4>
+
+                        </div>
+                        <h1 class="display-4 mb-4"> Frequently Asked Questions?</h1>
+
+                        <a class="btn btn-primary py-3 px-5 " href="#"
+                            style="background-color: #a95e34; color: white;">Have Any Questions ?</a>
+                    </div>
+                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.4s">
+                        <div class="h-100">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Q: What types of office environments can your interior designers in Pune
+                                            create?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show active"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            A: Our office interior designers in Pune excel at crafting diverse workplace
+                                            environments. Whether you're envisioning a sleek, modern minimalist look, a
+                                            dynamic open space that fosters collaboration, a timeless office reflecting
+                                            your
+                                            brand's legacy, or a completely bespoke design tailored to your unique
+                                            needs—our
+                                            team brings your vision to life with precision and creativity.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Q: Can your office interior designers in Pune incorporate eco-friendly
+                                            design
+                                            elements?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            A: Absolutely! Sustainability is a priority in our approach. Our office
+                                            interior
+                                            designers in Pune can integrate eco-friendly design elements into your
+                                            workspace. Whether it's through the use of sustainable materials,
+                                            energy-efficient fixtures, or incorporating local art and colors, we ensure
+                                            that
+                                            your office reflects both modern design and environmental responsibility.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Q: Do your office interior designers in Pune offer ergonomic interior design
+                                            services?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            A: Yes, ergonomic design is a key focus for us. Our office interior
+                                            designers in
+                                            Pune prioritize ergonomic principles to ensure your workspace is safe,
+                                            comfortable, and conducive to productivity. We tailor our solutions to
+                                            enhance
+                                            both staff well-being and efficiency, creating a workspace that supports
+                                            optimal
+                                            performance.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FAQ End -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer bg-dark  wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5 mb-5 align-items-center">
+                    <div class="col-lg-7">
+                        <div class="position-relative mx-auto">
+                            <input class="form-control w-100 py-3 ps-4 pe-5" type="text"
+                                placeholder="Email address to Subscribe">
+                            <button type="button"
+                                class="btn btn-primary position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="d-flex align-items-center justify-content-center justify-content-lg-end">
+                            <a class="btn btn-light btn-md-square me-3" href="./index.html"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-light btn-md-square me-3" href="./index.html"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a class="btn btn-light btn-md-square me-3" href="./index.html"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a class="btn btn-light btn-md-square me-0" href="./index.html"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <div class="footer-item">
+                                <img src="./img/ShubhLogo.png" alt="" height="70vh"
+                                    style="background-color: white;margin-bottom: 2.5vh; margin-top: -10px; border-radius: 2vh;">
+                                    <div class="design-build-container">
+                                        <div class="design-text">Design</div>
+                                        <div class="ampersand">&</div>
+                                        <div class="build-text">Build</div>
+                                    </div>
+                                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Quick Links</h4>
+                            <a href="index.html"> Home</a>
+                            <a href="#"> About us</a>
+                            <a href="service.html"> Services</a>
+                            <a href="portfolio.html"> Portfolio</a>
+                            <a href="contact.html"> Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Our service</h4>
+                            <a href="#"> Commercial</a>
+                            <a href="#"> Hospitality</a>
+                            <a href="#"> Home Designing</a>
+                            <a href="#"> Styling</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Contact Info</h4>
+
+                            <a href="mailto:shubhspaces@gmail.com"><i class="fas fa-envelope  text-light me-2"></i>
+                                shubhspaces@gmail.com</a>
+                            <a href="tel:+012 345 67890"><i class="fas fa-phone text-light me-2"></i>+91 75067 53363</a>
+                            <a href="https://maps.app.goo.gl/L1uFSyjXHknbbJhh7" target="_blank"><i
+                                    class="fa fa-map-marker-alt  me-2"></i>Shri Shantadurga Niwas,<br /> Behind JW
+                                Marriott hotel,<br />
+                                S.B road, Pune.</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-body"><a href="#" class="border-bottom text-white"><i
+                                    class="fas fa-copyright text-light me-2"></i>Shubh Interior</a>, All right
+                            reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end text-body">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        Designed By <a class="border-bottom text-white"
+                            href="https://pawartechnologyservices.com/">PTS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- Your HTML code here -->
+        <script>
+            const swiper = new Swiper('.slider-wrapper', {
+                loop: true,
+                grabCursor: true,
+                spaceBetween: 30,
+
+                // Disable dynamic bullets to keep them the same size
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    dynamicBullets: false  // Set to false to fix the size of pagination bullets
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // Responsive breakpoints
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1
+                    },
+                    768: {
+                        slidesPerView: 2
+                    },
+                    1024: {
+                        slidesPerView: 3
+                    }
+                }
+            });
+        </script>
+        <script>
+            const hamburger = document.querySelector('.hamburger');
+            const menu = document.querySelector('.Menu');
+
+            hamburger.addEventListener('click', () => {
+                console.log('Hamburger icon clicked!');
+                menu.classList.toggle('active');
+            });
+        </script>
+
+        <script>
+
+            $(function () {
+                var $clientslider = $('#clientlogo');
+                var clients = $clientslider.children().length;
+                var clientwidth = (clients * 220);
+                $clientslider.css('width', clientwidth);
+                var rotating = true;
+                var clientspeed = 1800;
+                var seeclients = setInterval(rotateClients, 20); // Set interval to 20ms for continuous animation
+                $(document).on({
+                    mouseenter: function () {
+                        rotating = false;
+                    },
+                    mouseleave: function () {
+                        rotating = true;
+                    }
+                }, '#ourclients');
+                function rotateClients() {
+                    if (rotating != false) {
+                        var $first = $('#clientlogo li:first');
+                        var marginLeft = parseInt($first.css('margin-left')) - 1; // Decrease margin-left by 1px
+                        if (marginLeft < -220) { // If margin-left is less than -220px, reset it to 0px
+                            marginLeft = 0;
+                            $first.remove().css({
+                                'margin-left': '0px'
+                            });
+                            $('#clientlogo li:last').after($first);
+                        }
+                        $first.css('margin-left', marginLeft + 'px'); // Set new margin-left value
+                    }
+                }
+                // Add this code to prevent the images from taking a pause
+                $clientslider.css('transform', 'translateX(0)');
+                $clientslider.css('transition', 'transform 0s');
+                $clientslider.css('backface-visibility', 'hidden');
+                $clientslider.css('perspective', '1000px');
+            });
+
+
+        </script>
+        <script>
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const navItems = document.querySelectorAll('.service .nav .nav-item a');
+
+                navItems.forEach(item => {
+                    item.addEventListener('click', function () {
+                        // Remove 'active' class from all items
+                        navItems.forEach(i => i.classList.remove('active'));
+
+                        // Add 'active' class to the clicked item
+                        item.classList.add('active');
+                    });
+                });
+            });
+        </script>
+
+        <!-- <script>
+    // JavaScript to show WhatsApp button when scrolled past two containers
+window.addEventListener("scroll", function() {
+  var whatsappButton = document.getElementById("whatsapp-btn");
+
+  // Get the height of the first two containers
+  var firstContainerHeight = document.querySelector(".header-carousel").offsetHeight;
+  var secondContainerHeight = document.querySelector(".container-fluid1").offsetHeight;
+  
+  // Get the current scroll position
+  var scrollPosition = window.scrollY;
+
+  // Show WhatsApp button after the two containers
+  if (scrollPosition > firstContainerHeight + secondContainerHeight) {
+    whatsappButton.style.display = "flex"; // Show the button
+  } else {
+    whatsappButton.style.display = "none"; // Hide the button
+  }
+});
+
+</script> -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const whatsappBtn = document.querySelector('.whatsapp-btn');
+
+                // Function to check scroll position
+                window.addEventListener('scroll', function () {
+                    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+                    // Show WhatsApp button after scrolling 100px
+                    if (scrollPosition > 100) {
+                        whatsappBtn.classList.add('show'); // Add 'show' class to make button visible
+                    } else {
+                        whatsappBtn.classList.remove('show'); // Remove 'show' class to hide the button
+                    }
+                });
+            });
+
+        </script>
+
+
+
+</body>
+
+</html>

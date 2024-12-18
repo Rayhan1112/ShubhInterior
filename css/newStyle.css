@@ -1,0 +1,81 @@
+
+
+.buttonClass10{
+  background-color: #ffffff; 
+  border: 1px solid black;
+  height: 8vh;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: black;
+  margin-bottom: 10vh;
+}
+
+.buttonClass10:hover{
+  background-color: #a95e34;;
+  transition: background-color 0.5s ease-in-out;
+  color: white;
+}
+
+.buttonClass11{
+  border: 1px solid black;
+  background-color: transparent;
+  height: 8vh;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+  background-color: #a95e34;;
+}
+.buttonClass11:hover{
+  background-color: #0E121D;
+  transition: background-color 0.5s ease-in-out;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .buttonClass10,.buttonClass11{
+    display: none;
+  }
+}
+
+
+
+
+/*  */
+.gallery {
+  column-count: 4;
+  --webkit-column-count: 4;
+  --moz-column-count: 4;
+  gap: 1rem;
+  padding: 4rem;
+}
+
+.image img {
+  height: auto;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Responsive-ness for different screen-sizes */
+@media screen and (max-width: 810px) {
+  .gallery {
+    column-count: 3;
+    --webkit-column-count: 3;
+    --moz-column-count: 3;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .gallery {
+    column-count: 2;
+    --webkit-column-count: 2;
+    --moz-column-count: 2;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .gallery {
+    column-count: 1;
+    --webkit-column-count: 1;
+    --moz-column-count: 1;
+  }
+}

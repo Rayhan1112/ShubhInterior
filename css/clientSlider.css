@@ -1,0 +1,31 @@
+
+.slider {
+	display: flex;
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 2.5rem;
+	background-image: url('../img/1500back.png');
+	margin-bottom: 5vh;
+	margin-top: -15vh;
+
+}
+.item {
+	animation: animate 15s linear infinite;
+}
+.item img
+	{
+		max-width: 300px;
+    height:  100px;
+		padding: 0 30px;
+		object-fit: contain;
+	}
+
+@keyframes animate {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	100% {
+		transform: translate3d(-1800px, 0, 0);
+	}
+}

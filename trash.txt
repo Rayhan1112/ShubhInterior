@@ -1,0 +1,96 @@
+       <!-- Projects Start -->
+    <div class="container-fluid projects bg-light py-5" style="background-image: url('./img/1500back.png');">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="aboutusPage">
+                        <h1 class="display-4 mb-4 fs-1">Advantages of Choosing Shubh Interiors
+                        </h1>
+                        <p class="mb-5">We specialize in creating luxurious living spaces that reflect your personal style. Whether it’s modern, traditional, or eclectic, our designs exude elegance and comfort, tailored to your lifestyle.</p>
+                        <ul class="nav">
+                            <li class="nav-item bg-white mb-4 w-100">
+                                <a class="d-flex align-items-center h4 mb-0 p-3 active" data-bs-toggle="pill"
+                                    href="#ProjectsTab-1">
+                                    <div class="projects-icon  text-white me-3">
+                                        <span class="fas  small"></span>
+                                    </div><span>Transparent Project Management</span>
+                                </a>
+                            </li>
+                            <li class="nav-item bg-white mb-4 w-100">
+                                <a class="d-flex align-items-center h4 mb-0 p-3" data-bs-toggle="pill"
+                                    href="#ProjectsTab-2">
+                                    <div class="projects-icon text-white me-3"><span
+                                            class="fas  small"></span></div><span>Adaptive Technical Expertise</span>
+                                </a>
+                            </li>
+                            <li class="nav-item bg-white mb-4 w-100">
+                                <a class="d-flex align-items-center h4 mb-0 p-3" data-bs-toggle="pill"
+                                    href="#ProjectsTab-3">
+                                    <div class="projects-icon  text-white me-3"><span
+                                            class="fas  small"></span></div><span>Diverse Design Options</span>
+                                </a>
+                            </li>
+                            <li class="nav-item bg-white mb-4 w-100">
+                                <a class="d-flex align-items-center h4 mb-0 p-3" data-bs-toggle="pill"
+                                    href="#ProjectsTab-4">
+                                        <div class="projects-icon  text-white me-3"><span
+                                            class="fas  small"></span></div><span>Celebratory Office Inauguration</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="tab-content">
+                        <div id="ProjectsTab-1" class="tab-pane fade show p-0 active">
+                            <div class="projects-item">
+                                <img src="img/Services/1.png" class="img-fluid w-100" alt="">
+                                <div class="projects-content bg-white p-4">
+                                    <h4 class="mb-3">Transparent Project Managementl</h4>
+                                    <p class="mb-4">Our efficient processes ensure seamless communication and provide real-time access to progress through interactive dashboards.
+                                    </p>
+                                    <!-- <a class="btn btn-primary py-2 px-4" href="#">Read More</a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ProjectsTab-2" class="tab-pane fade show p-0">
+                            <div class="projects-item">
+                                <img src="img/Services/2.png" class="img-fluid w-100" alt="">
+                                <div class="projects-content bg-white p-4">
+                                    <h4 class="mb-3">Adaptive Technical Expertise</h4>
+                                    <p class="mb-4">Our design capabilities ensure tailored office solutions across industries, technologies, and climates, delivering excellence.
+
+                                    </p>
+                                    <!-- <a class="btn btn-primary py-2 px-4" href="#">Read More</a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ProjectsTab-3" class="tab-pane fade show p-0">
+                            <div class="projects-item">
+                                <img src="img/Services/3.png" class="img-fluid w-100" alt="">
+                                <div class="projects-content bg-white p-4">
+                                    <h4 class="mb-3">Diverse Design Options</h4>
+                                    <p class="mb-4">Our versatile design options span color palettes, themes, and styles, ensuring your office reflects your unique preferences.
+                                    </p>
+                                    <!-- <a class="btn btn-primary py-2 px-4" href="#">Read More</a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ProjectsTab-4" class="tab-pane fade show p-0">
+                            <div class="projects-item">
+                                <img src="img/Services/4.png" class="img-fluid w-100" alt="">
+                                <div class="projects-content bg-white p-4">
+                                    <h4 class="mb-4">Celebratory Office Inauguration</h4>
+                                    <p class="mb-4">We integrate local materials, and cultural elements, ensuring alignment with your brand identity and enhancing local relevance.
+
+                                    </p>
+                                    <!-- <a class="btn btn-primary py-2 px-4" href="#">Read More</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projects End -->

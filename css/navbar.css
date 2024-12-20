@@ -106,6 +106,7 @@ nav ul li a:hover {
     nav ul li a {
         font-size: 16px;
     }
+   
 }
 
 /* Responsive media query code for small screen */
@@ -192,11 +193,18 @@ nav ul li a:hover {
     .logo-img {
       height: 90px; /* Larger logo size for desktops */
     }
+    nav ul {
+      margin-right: 33px;
+  }
+
   }
   
   @media (min-width: 1280px) {
     .logo-img {
       height: 100px; /* Larger logo for large screens */
+    }
+    nav ul {
+      margin-right: 10px;
     }
   }
   

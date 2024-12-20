@@ -19,7 +19,7 @@ label.logo {
     line-height: 80px;
     padding: 0 100px;
     font-weight: bold;
-    margin-left: 200px;
+    margin-left: 100px;
 }
 
 nav ul {
@@ -185,7 +185,7 @@ nav ul li a:hover {
   /* For larger desktops */
   @media (min-width: 1024px) {
     .logo-img {
-      margin-left: 120px;  /* Even larger margin for larger screens */
+      margin-left: 40px;  /* Even larger margin for larger screens */
     }
   }
   
@@ -210,19 +210,6 @@ nav ul li a:hover {
     .logo-img {
       height: 100px; /* Larger logo for large screens */
     }
-<<<<<<< HEAD
-    nav ul {
-      margin-right: 10px;
-    }
-=======
-    label.logo {
-      
-      padding: 0 100px;
-      
-      margin-left: 150px;
->>>>>>> 0326c373d75e5fa851f63d29bcac18e17ce15f94
-  }
-  
   }
 
   nav ul li a.active {

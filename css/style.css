@@ -270,7 +270,11 @@ html, body {
     box-shadow: inset 0 0 65px 0 var(--bs-primary);
 }
 
-
+@media (min-width: 1024px) {
+    .carousel-buttons {
+        left: 18.5%;
+    }
+  }
 /* Mobile responsive adjustments for buttons */
 @media (max-width: 768px) {
     .carousel-buttons {
@@ -749,6 +753,7 @@ background-size: cover; /* Ensure background covers well on smaller screens */
     box-shadow: 0 0 30px rgba(209, 20, 20, 0.1);
 
 }
+
 
 .projects .nav-item a.active {
     background: var(--bs-primary);
@@ -1688,6 +1693,7 @@ background-size: cover; /* Ensure background covers well on smaller screens */
     /* Make the button appear at the bottom of the image */
     .col-lg-7 {
         position: relative;
+        height: auto;
     }
 
     .aboutbuttn1 {

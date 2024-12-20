@@ -216,7 +216,7 @@ html, body {
 .carousel-buttons {
     position: absolute;
     bottom: 130px;  /* Adjust the space from the bottom of the carousel item */
-    left: 19.5%;
+    left: 20%;
     transform: translateX(-50%);  /* Center buttons horizontally */
     z-index: 1000;  /* Ensure buttons are above other content */
 
@@ -237,7 +237,7 @@ html, body {
 }
 
 .header-carousel-item .text-sm-center{
-    margin-left: 4px;
+    margin-left: -10px;
 }
 .header-carousel .owl-nav .owl-prev,
 .header-carousel .owl-nav .owl-next {
@@ -457,6 +457,13 @@ background-size: cover; /* Ensure background covers well on smaller screens */
 .header-carousel .carousel-item {
     padding-bottom: 50px; /* Ensure the bottom padding is sufficient for the buttons */
 }
+}
+@media (min-width: 1280px) {
+    .carousel-buttons {
+        
+        left: 20%;
+        
+    }
 }
 
 
@@ -735,10 +742,12 @@ background-size: cover; /* Ensure background covers well on smaller screens */
 /*** Projects Start ***/
 .projects .nav-item {
     box-shadow: 0 0 30px rgba(0, 0, 0, .09);
+    margin-top: 5px;
 }
 
 .projects-item .projects-content {
-    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 30px rgba(209, 20, 20, 0.1);
+
 }
 
 .projects .nav-item a.active {
@@ -940,6 +949,7 @@ background-size: cover; /* Ensure background covers well on smaller screens */
 /*** Team End ***/
 
 /*** FAQs Start ***/
+/* Default (Desktop) */
 .faq-section .accordion .accordion-item {
     margin-bottom: 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, .08);
@@ -950,21 +960,70 @@ background-size: cover; /* Ensure background covers well on smaller screens */
     color: #A36140;
     background: white;
     font-size: 18px;
-    
-    
 }
 
 .faq-section .accordion .accordion-item .accordion-header .accordion-button.collapsed {
-    
-    color:white;
+    color: white;
     background: #A36140;
-    
 }
 
 .accordion-button::after {
     transform: scale(1.5);
     font: bold;
 }
+
+/* Mobile Screen */
+@media (max-width: 768px) {
+    .faq-section .accordion .accordion-item .accordion-header .accordion-button {
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+
+    .faq-section .accordion .accordion-item {
+        margin-bottom: 15px; /* Slightly reduce space between items */
+    }
+
+    .faq-section .accordion .accordion-item .accordion-header .accordion-button {
+        text-align: left; /* Align text to the left on mobile screens */
+    }
+}
+
+/* Extra small Mobile (Portrait) */
+@media (max-width: 480px) {
+    .faq-section .accordion .accordion-item .accordion-header .accordion-button {
+        font-size: 14px; /* Even smaller font for very small screens */
+    }
+
+    .faq-section .accordion .accordion-item {
+        margin-bottom: 10px; /* Reduce space even more for small screens */
+    }
+
+    .accordion-button::after {
+        transform: scale(1.2); /* Adjust the icon size for small screens */
+    }
+
+    .faq-section .accordion .accordion-item .accordion-header .accordion-button {
+        text-align: left; /* Ensure text is left-aligned on extra small mobile */
+    }
+}
+
+/* Tablet / Small Desktop */
+@media (max-width: 1024px) {
+    .faq-section .accordion .accordion-item .accordion-header .accordion-button {
+        font-size: 17px; /* Adjust font size for tablets and smaller desktops */
+    }
+
+    .faq-section .accordion .accordion-item {
+        margin-bottom: 18px; /* Adjust spacing for tablets */
+    }
+
+    .faq-section .accordion .accordion-item .accordion-header .accordion-button {
+        text-align: left; /* Ensure left alignment for tablet screens */
+    }
+    .faq-section .accordion .accordion-item .accordion-body{
+        text-align: left;
+    }
+}
+
 
 /*** FAQs End ***/
 
@@ -1321,6 +1380,7 @@ background-size: cover; /* Ensure background covers well on smaller screens */
         margin-right: 80px; /* Larger margin for large screens */
         margin-bottom: 20px; /* Adjust bottom margin for large screens */
     }
+    
 }
 
 /* Media Query for Larger Screens (Desktop & Large Tablets, min-width: 1024px) */

@@ -57,7 +57,7 @@
 /* Arrows */
 .arrow {
   position: absolute;
-  top: 50%; /* Center arrows vertically */
+  top: 40%; /* Center arrows vertically */
   transform: translateY(-50%);
   font-size: 30px;
   color: white;

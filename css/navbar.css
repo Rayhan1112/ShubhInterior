@@ -185,7 +185,7 @@ nav ul li a:hover {
   /* For larger desktops */
   @media (min-width: 1024px) {
     .logo-img {
-      margin-left: 40px;  /* Even larger margin for larger screens */
+      margin-left: 50px;  /* Even larger margin for larger screens */
     }
   }
   

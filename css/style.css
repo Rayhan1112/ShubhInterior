@@ -234,6 +234,7 @@ html, body {
     display: flex;
     align-items: center;
     z-index:99;
+    padding-left: 9vh;
 }
 
 .header-carousel-item .text-sm-center{
@@ -270,11 +271,14 @@ html, body {
     box-shadow: inset 0 0 65px 0 var(--bs-primary);
 }
 
-@media (min-width: 1024px) {
-    .carousel-buttons {
-        left: 18.5%;
+@media (min-width:1280px){
+    .carousel-caption{
+     margin-left: -10vh;   
     }
-  }
+    .carousel-buttons{
+        margin-left: 2vh;
+    }
+}
 /* Mobile responsive adjustments for buttons */
 @media (max-width: 768px) {
     .carousel-buttons {
@@ -295,10 +299,10 @@ html, body {
         font-size: 1rem; /* Smaller font size for text */
     }
 
-    .header-carousel .carousel-caption {
+    .header-carousel  {
         background: rgba(0, 0, 0, 0.3); /* Slightly darker overlay */
     }
-
+   
     .header-carousel .carousel-item {
         padding-bottom: 30px; /* Ensure there’s space at the bottom for the buttons */
     }

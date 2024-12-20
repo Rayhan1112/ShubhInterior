@@ -11,6 +11,7 @@ nav {
   width: 170px;
   height: 70px;
   object-fit: contain;
+  
 }
 
 label.logo {
@@ -55,6 +56,8 @@ nav ul li a:hover {
 }
 
 
+
+
 .checkbtn {
     font-size: 22px;
     color: white;
@@ -78,6 +81,7 @@ nav ul li a:hover {
     max-height: 200px; /* Limit maximum height */
     object-fit: cover;
   }
+ 
 }
 
 /* Tablets (Small: max-width 768px) */
@@ -87,6 +91,7 @@ nav ul li a:hover {
     height: 210px; /* Adjust height proportionally */
     object-fit: cover;
   }
+  
 }
 
 /* Medium Screens (max-width: 1024px) */
@@ -96,6 +101,7 @@ nav ul li a:hover {
     height: 270px;
     object-fit: cover;
   }
+  
 }
 
 @media (max-width: 1050px) {
@@ -143,6 +149,7 @@ nav ul li a:hover {
         display: block;
         margin: 25px 0;
         line-height: 30px;
+        margin-left: -34px;
     }
 
     nav ul li a {
@@ -178,7 +185,7 @@ nav ul li a:hover {
   /* For larger desktops */
   @media (min-width: 1024px) {
     .logo-img {
-      margin-left: 100px;  /* Even larger margin for larger screens */
+      margin-left: 120px;  /* Even larger margin for larger screens */
     }
   }
   
@@ -203,8 +210,31 @@ nav ul li a:hover {
     .logo-img {
       height: 100px; /* Larger logo for large screens */
     }
+<<<<<<< HEAD
     nav ul {
       margin-right: 10px;
     }
+=======
+    label.logo {
+      
+      padding: 0 100px;
+      
+      margin-left: 150px;
+>>>>>>> 0326c373d75e5fa851f63d29bcac18e17ce15f94
   }
+  
+  }
+
+  nav ul li a.active {
+    
+    transform: scale(1.2); 
+    text-decoration: underline; /* Add underline to the active link */
+}
+
+/* Keep the same style for active link on hover */
+nav ul li a.active:hover {
+    
+    transform: scale(1.2);
+    text-decoration: underline; /* Keep underline even on hover */
+}
   

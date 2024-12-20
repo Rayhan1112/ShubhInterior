@@ -147,7 +147,9 @@
             <i class="fas fa-bars"></i>
         </label>
         <!-- Site logo -->
+         <a href="./index.html">
         <img src="./img/ShubhLogo.png" alt="Logo" class="logo-img">
+    </a>
         <!-- Navigation links -->
         <ul>
             <li><a href="#">Home</a></li>
@@ -717,7 +719,7 @@
                         <h4 class="mb-4 fs-1" style="color: #a95e34;">Testimonial</h4>
 
                     </div>
-                    <h1 class="display-4 text-white mb-4">Powerfull Praise Heare From Our Customers</h1>
+                    <h1 class="display-4 text-white mb-4">"Powerful Praise Heard From Our Customers"</h1>
                     <p class="mb-4" ">Their heartfelt words highlight how we consistently exceed expectations, making a
                         real difference in their experiences. With each testimonial, we are reminded of the trust and
                         satisfaction we've built with our clients, inspiring us to keep raising the bar.
@@ -743,9 +745,7 @@
                                 </div>
                             </div>
                             <div class="customer-text p-4">
-                                <p class="mb-0" >Customer satisfaction is at the heart of everything we do. With a focus
-                                    on quality and attention to detail, we ensure that each interaction is seamless and
-                                    leaves a lasting impression. Our goal is to exceed your expectations every time.</p>
+                                <p class="mb-0" >"We were initially unsure about some design choices, but Shubh interior expertly guided us to the perfect solutions, exceeding our expectations." </p>
                             </div>
                         </div>
                         <div class=" testimonial-item">
@@ -765,10 +765,7 @@
                                     </div>
                                 </div>
                                 <div class="customer-text p-4">
-                                    <p class="mb-0">Exceptional service and unmatched quality are what set us apart. Our
-                                        dedication to excellence drives us to continually innovate and exceed customer
-                                        expectations. Every experience with us is a testament to our commitment to
-                                        delivering only the best</p>
+                                    <p class="mb-0">We worked with Shubh for a master bath remodel. We were a little nervous about trying to work through the entire process online. We quickly learned those fears were unwarranted. Communication throughout the entire process was seamless...”</p>
                                 </div>
                             </div>
                             <div class="testimonial-item">
@@ -788,10 +785,7 @@
                                     </div>
                                 </div>
                                 <div class="customer-text p-4">
-                                    <p class="mb-0">From the moment you connect with us, you’ll notice the difference in
-                                        care and dedication. We strive to provide personalized experiences that meet
-                                        your
-                                        unique needs, ensuring every step of your journey with us is <br /> exceptional
+                                    <p class="mb-0">“I heard about Shubh from a co-worker and I'm glad I did. Their point of contact was great at describing what services were available and the best service that fit my needs, and why. When I was looking around for interior...”
                                     </p>
                                 </div>
                             </div>
@@ -893,10 +887,8 @@
                                         <div class="accordion-body">
                                             A: Our office interior designers in Pune excel at crafting diverse workplace
                                             environments. Whether you're envisioning a sleek, modern minimalist look, a
-                                            dynamic open space that fosters collaboration, a timeless office reflecting
-                                            your
-                                            brand's legacy, or a completely bespoke design tailored to your unique
-                                            needs—our
+                                            dynamic open space that fosters collaboration, a timeless office reflecting your
+                                            brand's legacy, or a completely bespoke design tailored to your unique needs—our
                                             team brings your vision to life with precision and creativity.
                                         </div>
                                     </div>
@@ -1000,7 +992,7 @@
                         <div class="footer-item d-flex flex-column">
                             <h4 class="text-white mb-4">Quick Links</h4>
                             <a href="index.html"> Home</a>
-                            <a href="#"> About us</a>
+                            <a href="about.html"> About us</a>
                             <a href="service.html"> Services</a>
                             <a href="portfolio.html"> Portfolio</a>
                             <a href="contact.html"> Contact Us</a>
@@ -1216,8 +1208,40 @@ window.addEventListener("scroll", function() {
             });
 
         </script>
+<script>
+// JavaScript to handle active link state
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all the links in the navigation
+    const links = document.querySelectorAll('nav ul li a');
+    
+    // Get the current page URL path
+    const currentPath = window.location.pathname;
+    
+    // Loop through all links and check if the link's href matches the current path
+    links.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            // Add the 'active' class to the link that matches the current page
+            link.classList.add('active');
+        } else {
+            // Remove the 'active' class from all other links
+            link.classList.remove('active');
+        }
+    });
+
+    // Optionally, handle click events to ensure the active state stays even after clicking
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            // Remove 'active' class from all links
+            links.forEach(l => l.classList.remove('active'));
+            
+            // Add 'active' class to the clicked link
+            this.classList.add('active');
+        });
+    });
+});
 
 
+</script>
 
 </body>
 

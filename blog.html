@@ -53,7 +53,9 @@
             <i class="fas fa-bars"></i>
         </label>
         <!-- Site logo -->
-        <img src="./img/ShubhLogo.png" alt="Logo" class="logo-img">
+        <a href="./index.html">
+            <img src="./img/ShubhLogo.png" alt="Logo" class="logo-img">
+        </a>
         <!-- Navigation links -->
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -80,7 +82,7 @@
                 <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our Blogs</h4>
                 <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active text-primary">Blogs</li>
+                    <li class="breadcrumb-item active text-primary">Our Blogs</li>
                 </ol>    
             </div>
         </div>
@@ -116,7 +118,7 @@
                         <p class="mb-4">In today's fast-paced world, minimalist design is trending, emphasizing simplicity and functionality without sacrificing style. At SHUBH Interiors, we believe a minimalist approach can transform your living space into a peaceful sanctuary. This blog explores key principles of minimalist design and how to incorporate them into your home.
 
                         </p>
-                        <a class="btn btn-primary py-2 px-4" href="#" style="margin-top: 3vh;">Learn More</a>
+                        <a class="btn btn-primary py-2 px-4" href="#" style="margin-top: 4vh;">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -136,7 +138,7 @@
                             home office.
 
                         </p>
-                        <a class="btn btn-primary py-2 px-4" href="#" style="margin-top: 5vh;">Learn More</a>
+                        <a class="btn btn-primary py-2 px-4" href="#" style="margin-top: 7vh;">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -154,7 +156,7 @@
                         <p class="mb-4">
                             Colors set the mood and ambiance of your home. The right palette creates a warm, inviting, and harmonious space. In this blog, SHUBH Interiors guides you through selecting perfect colors for your home, ensuring a cohesive and stylish look that reflects your personality and complements your interior design.
                         </p>
-                        <a class="btn btn-primary py-2 px-4" href="#" style="margin-top: 4vh;">Learn More</a>
+                        <a class="btn btn-primary py-2 px-4" href="#" style="margin-top: 7vh;">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -200,7 +202,7 @@
                 <div class="footer-item d-flex flex-column">
                     <h4 class="text-white mb-4">Quick Links</h4>
                     <a href="index.html"> Home</a>
-                    <a href="#"> About us</a>
+                    <a href="about.html"> About us</a>
                     <a href="service.html"> Services</a>
                     <a href="portfolio.html"> Portfolio</a>
                     <a href="contact.html"> Contact Us</a>
@@ -274,6 +276,41 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+
+        <script>
+            // JavaScript to handle active link state
+            document.addEventListener('DOMContentLoaded', function() {
+                // Get all the links in the navigation
+                const links = document.querySelectorAll('nav ul li a');
+                
+                // Get the current page URL path
+                const currentPath = window.location.pathname;
+                
+                // Loop through all links and check if the link's href matches the current path
+                links.forEach(link => {
+                    if (link.getAttribute('href') === currentPath) {
+                        // Add the 'active' class to the link that matches the current page
+                        link.classList.add('active');
+                    } else {
+                        // Remove the 'active' class from all other links
+                        link.classList.remove('active');
+                    }
+                });
+            
+                // Optionally, handle click events to ensure the active state stays even after clicking
+                links.forEach(link => {
+                    link.addEventListener('click', function() {
+                        // Remove 'active' class from all links
+                        links.forEach(l => l.classList.remove('active'));
+                        
+                        // Add 'active' class to the clicked link
+                        this.classList.add('active');
+                    });
+                });
+            });
+            
+            
+            </script>
     </body>
 
 </html>

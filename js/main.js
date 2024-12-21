@@ -102,18 +102,26 @@
     });
 
 
-   // Back to top button
-   $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
-        $('.back-to-top').fadeIn('slow');
-    } else {
-        $('.back-to-top').fadeOut('slow');
-    }
+    $(window).scroll(function () {
+        // Cache window and document heights for performance
+        let scrollTop = $(this).scrollTop();
+        let windowHeight = $(window).height();
+        let documentHeight = $(document).height();
+        let footerHeight = $('.footer').outerHeight();
+    
+        // Show the button when scrolled past 300px and not near the footer
+        if (scrollTop > 300 && scrollTop + windowHeight < documentHeight - footerHeight) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
     });
+    
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
     });
+    
 
 
 })(jQuery);

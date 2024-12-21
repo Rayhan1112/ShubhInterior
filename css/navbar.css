@@ -11,6 +11,7 @@ nav {
   width: 170px;
   height: 70px;
   object-fit: contain;
+  margin-top: -2px;
   
 }
 
@@ -165,13 +166,16 @@ nav ul li a:hover {
     #check:checked~ul {
         left: 0;
     }
+    .logo-img{
+      margin-top: 9px;
+    }
 }
 
 
   /* For tablets and larger screens */
   @media (min-width: 640px) {
     .logo-img {
-      margin-left: 30px;  /* Medium margin for small tablets and above */
+      margin-left: 10px;  /* Medium margin for small tablets and above */
     }
   }
   
@@ -179,6 +183,7 @@ nav ul li a:hover {
   @media (min-width: 768px) {
     .logo-img {
       margin-left: 50px;  /* Larger margin for desktop views */
+      
     }
   }
   

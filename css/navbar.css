@@ -211,6 +211,14 @@ nav ul li a:hover {
       height: 100px; /* Larger logo for large screens */
     }
   }
+  @media (min-width: 1601px) {
+    .logo-img {
+      margin-left: 120px;  /* Even larger margin for larger screens */
+    }
+    nav ul {
+      margin-right: 133px;
+  }
+  }
 
   nav ul li a.active {
     

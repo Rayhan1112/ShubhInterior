@@ -12,7 +12,6 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 10px;
     margin-top: 40px;
 }
 
@@ -82,10 +81,11 @@
     border-radius: 10px;
 }
 
-/* Responsive design for different screen sizes */
+/* Responsive Design for Specific Screen Sizes */
 
-/* Mobile screens (Small Phones) */
+/* Small Phones (320px - 576px) */
 @media (max-width: 576px) {
+    /* Example: iPhone SE, Android small screens */
     .CardContainer,
     .CardContainer1 {
         flex-direction: column;
@@ -105,8 +105,9 @@
     }
 }
 
-/* Tablets */
+/* Tablets (577px - 768px) */
 @media (min-width: 577px) and (max-width: 768px) {
+    /* Example: iPads in portrait */
     .flip-card {
         width: 350px;
         height: 300px;
@@ -114,8 +115,9 @@
     }
 }
 
-/* Small Laptops */
+/* Small Laptops (1024px - 1279px) */
 @media (min-width: 1024px) and (max-width: 1279px) {
+    /* Example: MacBook Air 13-inch (pre-2018) */
     .flip-card {
         width: 350px;
         height: 250px;
@@ -123,8 +125,9 @@
     }
 }
 
-/* 13-inch Laptops */
+/* 13-inch Laptops (1280px - 1366px) */
 @media (min-width: 1280px) and (max-width: 1366px) {
+    /* Example: Dell XPS 13, Surface Laptop */
     .flip-card {
         width: 420px;
         height: 320px;
@@ -132,26 +135,29 @@
     }
 }
 
-/* Standard Laptops */
+/* Standard Laptops (1367px - 1440px) */
 @media (min-width: 1367px) and (max-width: 1440px) {
+    /* Example: MacBook Pro 15-inch, typical HD laptops */
     .flip-card {
-        width: 450px;
-        height: 350px;
+        width: 400px;
+        height: 300px;
         perspective: 1200px;
     }
 }
 
-/* Wide Screens */
+/* Wide Screens (1441px - 1920px) */
 @media (min-width: 1441px) and (max-width: 1920px) {
+    /* Example: 1080p monitors, gaming laptops */
     .flip-card {
-        width: 500px;
-        height: 400px;
+        width: 400px;
+        height: 300px;
         perspective: 1300px;
     }
 }
 
-/* 4K Screens */
+/* Ultra-Wide and 4K Screens (1921px and up) */
 @media (min-width: 1921px) {
+    /* Example: 4K monitors, ultra-wide screens */
     .flip-card {
         width: 600px;
         height: 500px;

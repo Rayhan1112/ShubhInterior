@@ -310,7 +310,14 @@ html, body {
         flex-direction: column;
         left: 50%; /* Keep buttons centered */
         gap: 8px; /* Space buttons closer together */
-        margin-bottom: 100px; /* Keep enough space at the bottom */
+        margin-bottom: 70px; /* Keep enough space at the bottom */
+        
+    }
+    .carousel-caption{
+        margin-left: -2vh;
+    }
+    .groupbtn{
+        margin-top: 2vh;
     }
 
     .header-carousel .display-2 {
@@ -340,6 +347,7 @@ html, body {
         flex-direction: column; 
         position: absolute;
         bottom: 0;
+      
     }
 
     .header-carousel .display-2 {
@@ -359,13 +367,17 @@ html, body {
     .header-carousel .carousel-item {
         padding-bottom: 40px; /* Adjust for proper spacing in small screens */
     }
+    .carousel-caption{
+        margin-left: -5vh;
+    }
 }
 
 /* For very small mobile screens (portrait mode) */
 @media (max-width: 360px) {
     .carousel-buttons {
-        bottom: 10px; /* Reduce bottom margin for very small screens */
+        bottom: 20px; /* Reduce bottom margin for very small screens */
         gap: 3px; /* Even less space between buttons */
+
     }
 
     .header-carousel .display-2 {
